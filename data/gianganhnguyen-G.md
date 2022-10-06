@@ -8,7 +8,7 @@ Instances include:
     File contracts/lib/EIP712.sol, line 77:             for (uint256 i = 0; i < fees.length; i++) {
     File contracts/lib/MerkleVerifier.sol, line 77: for (uint256 i = 0; i < proof.length; i++) {
 
-I suggest using ++i instead of i++ to increment the value of an uint variable.
+I suggest using `++i` instead of `i++` to increment the value of an uint variable.
 
 # 2. [G-2] For loops: Cache the length of arrays in the loops to save gas
 
@@ -79,11 +79,11 @@ Instances include:
                                                                                        "EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"
                                                                           );
 
-Change these expressions from ***constant*** to ***immutable*** and implement the calculation in the constructor, or hardcode these values in the constants and add a comment to say how the value was calculated.
+Change these expressions from `constant` to `immutable` and implement the calculation in the constructor, or hardcode these values in the constants and add a comment to say how the value was calculated.
 
 # 6. [G-6] Comparisons: Boolean comparations
 
-Comparing to a constant (***true*** or ***false***) is a bit more expensive than directly checking the returned value boolean. I suggest using ***require (condition, ...)*** instead of ***require (condition == true, ...)*** and ***require (!condition, ...)*** instead of ***require (condition == false, ...)*** here:
+Comparing to a constant (`true` or `false`) is a bit more expensive than directly checking the returned value boolean. I suggest using `require (condition, ...)` instead of `require (condition == true, ...)` and `require (!condition, ...)` instead of `require (condition == false, ...)` here:
 
     File contracts/ExecutionDelegate.sol, line 77:     require(revokedApproval[from] == false, "User has revoked approval");
     File contracts/ExecutionDelegate.sol, line 92:     require(revokedApproval[from] == false, "User has revoked approval");
@@ -92,9 +92,9 @@ Comparing to a constant (***true*** or ***false***) is a bit more expensive than
 
 # 7. [G-7] Arithmetics: uncheck blocks for arithmetics operations that can't underflow/overflow
 
-Solidity version 0.8+ comes with implicit overflow and underflow checks on unsigned integers. When an overflow or an underflow isn't possible, some gas can be saved by using an ***unchecked*** block.
+Solidity version 0.8+ comes with implicit overflow and underflow checks on unsigned integers. When an overflow or an underflow isn't possible, some gas can be saved by using an `unchecked` block.
 
-I suggest wrapping with an ***unchecked*** block here:
+I suggest wrapping with an `unchecked` block here:
 
     File contracts/BlurExchange.sol, line 477:     uint256 fee = (price * fees[i].rate) / INVERSE_BASIS_POINT;
     File contracts/BlurExchange.sol, line 479:     totalFee += fee;
