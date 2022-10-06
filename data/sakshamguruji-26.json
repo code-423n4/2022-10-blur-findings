@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "sakshamguruji",
+  "risk": "2",
+  "title": "No Zero Address Checks(Or Checks To Prove If A Policy Is Valid) Which Can Lead To Adding Garbage Policies In _whitelistedPolicies Which Moght Lead To DoS",
+  "issueId": 26,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/26"
+}
