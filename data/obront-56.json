@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "obront",
+  "risk": "3",
+  "title": "ERC1155 policy ignores order.amount, putting user funds at risk",
+  "issueId": 56,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/56"
+}
