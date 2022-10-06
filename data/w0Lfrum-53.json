@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "w0Lfrum",
+  "risk": "2",
+  "title": "Recommendation to use safeTransferfrom() instead of transferFrom()",
+  "issueId": 53,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/53"
+}
