@@ -19,7 +19,7 @@ Instances include:
 [`contracts/lib/MerkleVerifier.sol:38`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/MerkleVerifier.sol#L38)
 
 ## Not initializing `unit` variable to default value of zero
-It cost more gas. 
+It costs more gas. 
 
 Instances include: 
 [`contracts/PolicyManager.sol:77`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/PolicyManager.sol#L77)
@@ -35,7 +35,7 @@ Instances include:
 
 ## Use custom errors rather than REVERT()/REQUIRE() to save gas
 Instances include:
-Custom error from solidity 0.8.4 are cheaper than revert strings, custom error are defined using the `error` statement can use inside and outside the contract.
+Custom errors from solidity 0.8.4 are cheaper than revert strings, custom errors are defined using the `error` statement can use inside and outside the contract.
 source [https://blog.soliditylang.org/2021/04/21/custom-errors/](https://blog.soliditylang.org/2021/04/21/custom-errors/)
 I suggest replacing revert error strings with custom error
 
@@ -63,3 +63,39 @@ Instances include:
 [`contracts/BlurExchange.sol:431`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L431)
 [`contracts/BlurExchange.sol:482`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L482)
 [`contracts/BlurExchange.sol:534`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L534)
+
+## Calls to `keccak256` should use `immutable` instead of constants
+
+Instances include: 
+[`contracts/lib/EIP712.sol:20`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L20)
+[`contracts/lib/EIP712.sol:23`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L23)
+[`contracts/lib/EIP712.sol:26`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L26)
+[`contracts/lib/EIP712.sol:29`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L29)
+[`contracts/lib/EIP712.sol:33`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L33)
+
+## BYTES CONSTANTS ARE CHEAPER THAN STRING CONSTANTS
+If the string can fit into 32 bytes, then `bytes32` is cheaper than `string`. `string` is a dynamically sized-type, which has current limitations in Solidity compared to a statically sized variable. This means extra gas spent upon deployment and every time the constant is read.
+
+Instances include: 
+[`contracts/BlurExchange.sol:57`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L57)
+[`contracts/BlurExchange.sol:58`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L58)
+
+## `++i`/`i++` should be `unchecked{++i}`/`unchecked{i++}` when it is not possible for them to overflow
+[`contracts/PolicyManager.sol:77`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/PolicyManager.sol#L77)
+[`contracts/lib/EIP712.sol:77`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L77)
+[`contracts/BlurExchange.sol:199`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L199)
+[`contracts/BlurExchange.sol:476`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L476)
+[`contracts/lib/MerkleVerifier.sol:38`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/MerkleVerifier.sol#L38)
+
+## Use `calldata` instead of `memory` for function parameters  
+  
+It is generally cheaper to load variables directly from calldata, rather than copying them to memory. Only use memory if the variable needs to be modified.  
+  
+Instances include:
+[`contracts/lib/MerkleVerifier.sol:35`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/MerkleVerifier.sol#L35)
+
+## Usage of uints/ints smaller than 32 bytes (256 bits) incurs overhead
+When using elements that are smaller than 32 bytes, your contract’s gas usage may be higher. This is because the EVM operates on 32 bytes at a time. Therefore, if the element is smaller than that, the EVM must use more operations in order to reduce the size of the element from 32 bytes to the desired size.
+
+Instances include:
+[`contracts/BlurExchange.sol:476`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L476)
