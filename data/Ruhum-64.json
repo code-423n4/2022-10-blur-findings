@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Ruhum",
+  "risk": "2",
+  "title": "Any ETH sent to exchange with `paymentToken != address(0)` will be locked up in the contract",
+  "issueId": 64,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/64"
+}
