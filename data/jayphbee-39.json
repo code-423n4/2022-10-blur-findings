@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "jayphbee",
+  "risk": "3",
+  "title": "`StandardPolicyERC1155.canMatchMakerAsk` and `StandardPolicyERC1155.canMatchMakerBid` returns a constant 1 amount which leads to pay more than expected.",
+  "issueId": 39,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/39"
+}
