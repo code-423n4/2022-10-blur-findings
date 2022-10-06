@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "DimitarDimitrov",
+  "risk": "2",
+  "title": "No checks for zero address in addPolicy() method",
+  "issueId": 23,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/23"
+}
