@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Bnke0x0",
+  "risk": "2",
+  "title": "Use of Solidity version 0.8.13 which has two known issues applicable to Blur",
+  "issueId": 38,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/38"
+}
