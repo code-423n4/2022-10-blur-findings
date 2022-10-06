@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "aviggiano",
+  "risk": "2",
+  "title": "Owner can set `blockRange` parameter as 0 and block all oracle-authorized orders from being executed",
+  "issueId": 19,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/19"
+}
