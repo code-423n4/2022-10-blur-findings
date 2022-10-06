@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "ch13fd357r0y3r",
+  "risk": "2",
+  "title": "Usage of deprecated transfer() can result in revert.",
+  "issueId": 18,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/18"
+}
