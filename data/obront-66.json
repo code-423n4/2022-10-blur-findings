@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "obront",
+  "risk": "2",
+  "title": "Use of .transfer may revert if recipient's fallback function consumes more than 2300 gas",
+  "issueId": 66,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/66"
+}
