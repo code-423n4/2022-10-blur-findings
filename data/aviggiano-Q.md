@@ -26,3 +26,29 @@ index 6fdc510..91d13aa 100644
  
      /**
 ```
+
+# 2. Validate initialization parameters on BlurExchange
+
+The misconfiguration of `BlurExchange` can lead to the malfunctioning of the exchange. The `initialize` parameters should be validated to be non-null:
+
+```diff
+diff --git a/contracts/BlurExchange.sol b/contracts/BlurExchange.sol
+index 6fdc510..e220876 100644
+--- a/contracts/BlurExchange.sol
++++ b/contracts/BlurExchange.sol
+@@ -101,6 +101,13 @@ contract BlurExchange is IBlurExchange, ReentrancyGuarded, EIP712, OwnableUpgrad
+         uint _blockRange
+     ) public initializer {
+         __Ownable_init();
++
++	require(_weth != address(0), "Address cannot be zero");
++	require(address(_executionDelegate) != address(0), "Address cannot be zero");
++	require(address(_policyManager) != address(0), "Address cannot be zero");
++	require(_oracle != address(0), "Address cannot be zero");
++	require(_blockRange != 0, "Block range cannot be zero");
++
+         isOpen = 1;
+ 
+         DOMAIN_SEPARATOR = _hashDomain(EIP712Domain({
+
+```
