@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "obront",
+  "risk": "2",
+  "title": "Users are able to create maker bids with ETH, but takers will lose ETH if they accept them",
+  "issueId": 67,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/67"
+}
