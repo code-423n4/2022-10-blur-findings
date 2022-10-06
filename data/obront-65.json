@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "obront",
+  "risk": "2",
+  "title": "Users who send Ether along with execute() call can have funds stuck in contract",
+  "issueId": 65,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/65"
+}
