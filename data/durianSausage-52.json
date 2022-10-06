@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "durianSausage",
+  "risk": "3",
+  "title": "H01:  We should use address(xxx).call{value:xxxx} instead of payable(msg.sender).transfer(",
+  "issueId": 52,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/52"
+}
