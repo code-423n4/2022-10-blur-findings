@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "obront",
+  "risk": "3",
+  "title": "ERC1155 policy doesn't check for a match on amount",
+  "issueId": 59,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/59"
+}
