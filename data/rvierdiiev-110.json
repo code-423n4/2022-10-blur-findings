@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "rvierdiiev",
+  "risk": "2",
+  "title": "User can create orders to sell nft for himself and lose on fees",
+  "issueId": 110,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/110"
+}
