@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "ladboy233",
+  "risk": "2",
+  "title": "Compromised admin can modify blockRange value arbitrarily to block user from filling valid order / blockRange setting missing 0 value check",
+  "issueId": 131,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/131"
+}
