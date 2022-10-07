@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Bnke0x0",
+  "risk": "2",
+  "title": "Order cancellation is prone to frontrunning and is dependent on a centralized database",
+  "issueId": 134,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/134"
+}
