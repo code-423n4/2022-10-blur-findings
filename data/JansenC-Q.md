@@ -5,12 +5,18 @@ The return value of an external call is not stored in a local or state variable.
 ### Location
 https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/PolicyManager.sol#L27
 https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/PolicyManager.sol#L38
+### Solution
+Consider using the boolean return to validate if the operation went as expected.
 # Lack of zero check address
 It's possivle to set an 0x0 address to an admin role.
 ### Impact
 If, by mistake, an empty address (0x0) is set as 'executionDelegate', for example, the contract's functions could be compromised.
 ### Location
 https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L113-L117
+### Solution
+```
+require(admin != (0x0), "");
+```
 # Unsafe ERC20 operations
 Contracts are using ```.transfer()``` and ```.transferFrom()```.
 ### Impact
@@ -54,5 +60,7 @@ https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c
         IERC721(collection).transferFrom(from, to, tokenId);
     }
 ```
+### Solution
+The better solution is to use ```safeTrasferFrom()``` and ```safeTranfer()```
 
 
