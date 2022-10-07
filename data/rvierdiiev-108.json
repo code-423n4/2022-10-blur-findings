@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "rvierdiiev",
+  "risk": "2",
+  "title": "BlurExchange.initialize chainId param leads to potential replay attacks on different chains",
+  "issueId": 108,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/108"
+}
