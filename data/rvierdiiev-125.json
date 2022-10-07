@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "rvierdiiev",
+  "risk": "2",
+  "title": "Malicious fee recipient can revert on payment on do denial of service for the seller orders if payment is done in ether",
+  "issueId": 125,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/125"
+}
