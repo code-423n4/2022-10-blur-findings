@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "ladboy233",
+  "risk": "2",
+  "title": "USE OF SOLIDITY VERSION 0.8.13 WHICH HAS TWO KNOWN ISSUES APPLICABLE TO BLUR Markplace contract",
+  "issueId": 161,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/161"
+}
