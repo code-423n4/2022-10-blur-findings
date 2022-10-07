@@ -12,6 +12,7 @@
 | [LOW&#x2011;7](#LOW&#x2011;7) | Missing parameter validation | 1 |
 | [LOW&#x2011;8](#LOW&#x2011;8) | Usage of `payable.transfer` can lead to loss of funds  | 1 |
 | [LOW&#x2011;9](#LOW&#x2011;9) | Upgrade OpenZeppelin Contraact Dependency | 2 |
+| [LOW&#x2011;10](#LOW&#x2011;10) | `ecrecover` may return empty address | 1 |
 
 Total: 41 instances over 9 issues
 
@@ -456,7 +457,22 @@ https://github.com/code-423n4/2022-10-blur/tree/main/package.json#L64
 
 Update OpenZeppelin Contracts Usage in package.json
 
+### <a href="#Summary">[LOW&#x2011;10]</a><a name="LOW&#x2011;10"> `ecrecover` may return empty address
 
+There is a common issue that `ecrecover` returns empty (0x0) address when the signature is invalid. `function _recover` should check that before returning the result of `ecrecover`.
+
+#### <ins>Proof Of Concept</ins>
+
+
+```
+return ecrecover(digest, v, r, s);
+```
+
+https://github.com/code-423n4/2022-10-blur/tree/main/contracts/BlurExchange.sol#L408
+
+#### <ins>Recommended Mitigation Steps</ins>
+
+See the solution here: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.4.0/contracts/cryptography/ECDSA.sol#L68
 
 ## Non Critical Issues
 
