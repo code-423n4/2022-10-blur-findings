@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "rvierdiiev",
+  "risk": "2",
+  "title": "If oracle variable is 0 address then it's possible for attacker to sign user's order and pass the oracle signature check. Also then it's possible to replay canceled orders.",
+  "issueId": 122,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/122"
+}
