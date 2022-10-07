@@ -1,13 +1,4 @@
-ISsue 1.
-- change `i++` in your for loops to `unchecked{++i}` .on L199
-https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L199
-
-prefix arithmetic is a bit cheaper than postfix arithmetic, but if you do it in a for loop, this small amount of gas can pile up and be a big waste.
-
-also, in solidity 0.8.0+, every arithmetic operation is checked for overflow and underflow, which adds a lot of gas to a single operation. 
-Since in your for loop you don't have the risk for overflow, you can surround the operation in unchecked{} to save lost of gas.
-
-Issue 2.
+Issue 1.
 
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L278
 
@@ -22,7 +13,7 @@ unnecessary OR condition applied if expirationTime == 0 = true than condition af
 one condition either expirationTime == 0 or block.timestamp < expirationTime since both condion could not be true at same time. 
 Simutaneously Waste of gas by applying two conditions. 
 
-Issue 3.
+Issue 2.
 
 Redundant return for named returns
 Redundant code increase contract size and gas usage at deployment.
@@ -38,7 +29,7 @@ return (price, tokenId, amount, assetType)
 
 L433, return (price, tokenId, amount, assetType) is redundant
 
-Issue 4. 
+Issue 3. 
 
 No need to initialize variables with default values
 
@@ -50,7 +41,7 @@ Explicitly initializing it with its default value is an anti-pattern and wastes 
 
 Remove explicit initialization for default values.
 
-Issue5.
+Issue 4.
 
 Use custom error to reduce the wastage of gas.
 
@@ -61,7 +52,7 @@ https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L428
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L534
 
-Issue 6.
+Issue 5.
 
 No need to create a local variable and initialize already create variable in that it will be a waste of gas.
 
@@ -76,7 +67,7 @@ function viewWhitelistedPolicies(uint256 cursor, uint256 size)
         uint256 length = size; //no need of declaring length 
 
 
-Issue 7.
+Issue 6.
 
 No need to initialize variables with default values
 
@@ -99,7 +90,7 @@ https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/MerkleVerifie
 Recommended Mitigation Steps
 Remove explicit initialization for default values
 
-Issue 8.
+Issue 7.
 prefix arithmetic is a bit cheaper than postfix arithmetic, but if you do it in a for loop, this small amount of gas can pile up and be a big waste.
 
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/
