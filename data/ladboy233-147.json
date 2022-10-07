@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "ladboy233",
+  "risk": "3",
+  "title": "Malicious Order creator can charge unreasonable amount of the fee when creating the order so seller cannot get the amount of token fairly when selling their NFT",
+  "issueId": 147,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/147"
+}
