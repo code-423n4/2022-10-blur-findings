@@ -1,0 +1,8 @@
+# Signature scheme does not support smart contracts
+Blur does not support [EIP 1271](https://eips.ethereum.org/EIPS/eip-1271) and therefore no signatures that are validated by smart contracts. This limits the applicability for protocols that want to build on top of it and persons that use smart contract wallets. Consider implementing support for it
+# Fee recipient may be address(0)
+The recipient of a fee (https://github.com/code-423n4/2022-10-blur/blob/d1c22a94ed08b08fe3f7d5c96e973d80d3dc0e54/contracts/BlurExchange.sol#L478) may be `address(0)`, leading to lost ETH.
+# Very restrictive policies
+The provided policies enforce that the prices match exactly (https://github.com/code-423n4/2022-10-blur/blob/d1c22a94ed08b08fe3f7d5c96e973d80d3dc0e54/contracts/matchingPolicies/StandardPolicyERC721.sol#L56), which is very restrictive in practice. If the seller has a lower sale price than the price that is provided by the buyer, this should ideally also match (either at the lower price or in between), because both parties would be happy with that.
+# BlurExchange.execute buy.order.side not validated
+In `BlurExchange.execute`, it is not validated that `buy.order.side == Side.Buy` (only the sell side is validated). With the current system, all policies ensure that, but it would also make sense to validate it in `execute` IMO. Future policies may not validate that and such a basic check should also not be the responsibility of a policy in my opinion.
