@@ -13,6 +13,7 @@
 | [LOW&#x2011;8](#LOW&#x2011;8) | Usage of `payable.transfer` can lead to loss of funds  | 1 |
 | [LOW&#x2011;9](#LOW&#x2011;9) | Upgrade OpenZeppelin Contraact Dependency | 2 |
 | [LOW&#x2011;10](#LOW&#x2011;10) | `ecrecover` may return empty address | 1 |
+| [LOW&#x2011;11](#LOW&#x2011;11) | `transferOwnership` Should Be Two Step | 1 |
 
 Total: 41 instances over 9 issues
 
@@ -473,6 +474,22 @@ https://github.com/code-423n4/2022-10-blur/tree/main/contracts/BlurExchange.sol#
 #### <ins>Recommended Mitigation Steps</ins>
 
 See the solution here: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.4.0/contracts/cryptography/ECDSA.sol#L68
+
+### <a href="#Summary">[LOW&#x2011;11]</a><a name="LOW&#x2011;11"> TransferOwnership Should Be Two Step
+
+`BlurExchange.sol` is inherting the `OwnableUpgradeable` contract which contains the `transferOwnership` function.
+Recommend considering implementing a two step process where the owner or admin nominates an account and the nominated account needs to call an `acceptOwnership()` function for the transfer of ownership to fully succeed. This ensures the nominated EOA account is a valid and active account.
+
+#### <ins>Proof Of Concept</ins>
+
+```
+contract BlurExchange is IBlurExchange, ReentrancyGuarded, EIP712, OwnableUpgradeable, UUPSUpgradeable {
+```
+https://github.com/code-423n4/2022-10-blur/tree/main/contracts/BlurExchange.sol#L30
+
+#### <ins>Recommended Mitigation Steps</ins>
+
+Lack of two-step procedure for critical operations leaves them error-prone. Consider adding two step procedure on the critical functions.
 
 ## Non Critical Issues
 
