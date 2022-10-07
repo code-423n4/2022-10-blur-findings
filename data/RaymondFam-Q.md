@@ -48,3 +48,7 @@ Lines in source code are typically limited to 80 characters, but it’s reasonab
 
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L124
 
+## Use of `ecrecover` is Susceptible to Signature Malleability
+The built-in EVM pre-compiled `ecrecover` is susceptible to signature malleability due to non-unique v and s (which may not always be in the lower half of the modulo set) values, possibly leading to replay attacks. Despite not exploitable in the current implementation with the adoption of nonces, this could prove a vulnerability when not carefully used elsewhere.
+
+Consider using OpenZeppelin’s ECDSA library which has been time tested in preventing this malleability where possible.
