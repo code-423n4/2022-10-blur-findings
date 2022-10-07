@@ -33,6 +33,8 @@ Total: 41 instances over 9 issues
 | [NC&#x2011;11](#NC&#x2011;11) | Use `bytes.concat()` | 4 |
 | [NC&#x2011;12](#NC&#x2011;12) | Use of `ecrecover` is susceptible to signature malleability | 1 |
 | [NC&#x2011;13](#NC&#x2011;13) | Stop using `v != 27 && v != 28` or `v == 27 \|\| v == 28` | 1 |
+| [NC&#x2011;14](#NC&#x2011;14) | Prevent accidentally burning tokens | 3 |
+
 
 Total: 30 instances over 13 issues
 
@@ -837,7 +839,7 @@ https://github.com/code-423n4/2022-10-blur/tree/main/contracts/BlurExchange.sol#
 
 
 
-#### Recommended Mitigation Steps
+#### <ins>Recommended Mitigation Steps</ins>
 Consider using OpenZeppelin’s ECDSA library (which prevents this malleability) instead of the built-in function.
 
 
@@ -856,7 +858,35 @@ v == 27 || v == 28
 https://github.com/code-423n4/2022-10-blur/tree/main/contracts/BlurExchange.sol#L407
 
 
+### <a href="#Summary">[NC&#x2011;14]</a><a name="NC&#x2011;14"> Prevent accidentally burning tokens
 
+Transferring tokens to the zero address is usually prohibited to accidentally avoid “burning” tokens by sending them to an unrecoverable zero address.
+
+
+#### <ins>Proof Of Concept</ins>
+
+
+```
+payable(to).transfer(amount);
+```
+
+https://github.com/code-423n4/2022-10-blur/tree/main/contracts/BlurExchange.sol#L508
+
+```
+IERC721(collection).transferFrom(from, to, tokenId);
+```
+
+https://github.com/code-423n4/2022-10-blur/tree/main/contracts/ExecutionDelegate.sol#L78
+
+```
+return IERC20(token).transferFrom(from, to, amount);
+```
+
+https://github.com/code-423n4/2022-10-blur/tree/main/contracts/ExecutionDelegate.sol#L125
+
+
+#### <ins>Recommended Mitigation Steps</ins>
+Consider adding a check to prevent accidentally burning tokens here
 
 
 
