@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Bnke0x0",
+  "risk": "2",
+  "title": "ExecutionDelegate deposits don't work with fee-on transfer tokens",
+  "issueId": 120,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/120"
+}
