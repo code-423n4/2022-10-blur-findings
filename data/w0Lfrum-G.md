@@ -2,7 +2,7 @@
 
 This report describes opportunity for gas optimization in the order of appearance in the code. It is not an exhaustive list of extreme gas optimization, but a series of quick wins that do not hinder code clarity (in some cases even enhance it), while having a perceptible net gain.
 
-### Using Pre-increment (++i) instead of Post-increment (i++) or i+=1
+### 1. Using Pre-increment (++i) instead of Post-increment (i++) or i+=1
 
 In for loops, unchecked pre-increment (++i) costs lesser gas than post-increment (i++) or i+=1 (5 gas for every iteration)
 
@@ -66,3 +66,12 @@ Can be replaced with:
 
 The use of unchecked block saves gas as there would be no checks for overflow for each iteration.
 The unchecked block can be used in this case as the length of the whitelistedPolicies array will not exceed 2^256 - 1 (as the total number of addresses doesn't exceed 2^256 - 1) , hence there will not be any overflows.
+
+### 2. A function that should be declared as view
+
+A function that does not change any state should be declared as `view` to save gas.
+
+**Relevant Code:**
+1. BlurExchange.sol[#L53](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L53) :
+
+Replace `function _authorizeUpgrade(address) internal override onlyOwner {}` with `function _authorizeUpgrade(address) internal view override onlyOwner {}`
