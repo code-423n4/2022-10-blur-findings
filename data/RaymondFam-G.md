@@ -166,3 +166,12 @@ Consider marking functions with access control as `payable`. This will save 20 g
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/ExecutionDelegate.sol#L36
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/PolicyManager.sol#L36
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L244
+
+## `uint256` Can be Cheaper Than `uint8`
+When dealing with function arguments or memory values, there is no inherent benefit because the compiler does not pack these values. Your contract’s gas usage may be higher because the EVM operates on 32 bytes at a time. Therefore, if the element is smaller than that, the EVM must use more operations in order to reduce the size of the element from 32 bytes to the desired size. The EVM needs to properly enforce the limits of this smaller type.
+
+It is only more efficient when you can pack variables of uint8 into the same storage slot with other neighboring variables smaller than 32 bytes. Here are some of the instances entailed:
+
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L199
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L347
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L383
