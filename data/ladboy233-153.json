@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "ladboy233",
+  "risk": "3",
+  "title": "Malicious Order creator can create malicious NFT contract to steal the token from buyer when order and transfer NO NFT is executed",
+  "issueId": 153,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/153"
+}
