@@ -98,3 +98,13 @@ https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/MerkleVerifie
 
 Recommended Mitigation Steps
 Remove explicit initialization for default values
+
+Issue 8.
+prefix arithmetic is a bit cheaper than postfix arithmetic, but if you do it in a for loop, this small amount of gas can pile up and be a big waste.
+
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/
+BlurExchange.sol#L199
+    for (uint8 i = 0; i < orders.length; i++) 
+
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L476
+    for (uint8 i = 0; i < fees.length; i++) 
