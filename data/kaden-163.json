@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "kaden",
+  "risk": "2",
+  "title": "ETH mistakenly sent with WETH buy orders will be permanently lost",
+  "issueId": 163,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/163"
+}
