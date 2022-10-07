@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "ladboy233",
+  "risk": "2",
+  "title": "Same trader can execute the order from himself (buy and sell himself) to spoof and spam the trading volume because the seller and buyer can be same address",
+  "issueId": 169,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/169"
+}
