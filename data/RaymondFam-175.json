@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "RaymondFam",
+  "risk": "3",
+  "title": "Initialization Functions Can be Front-run",
+  "issueId": 175,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/175"
+}
