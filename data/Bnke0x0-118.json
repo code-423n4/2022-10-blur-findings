@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Bnke0x0",
+  "risk": "3",
+  "title": "transferERC20() does not work on non-standard compliant tokens like USDT",
+  "issueId": 118,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/118"
+}
