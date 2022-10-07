@@ -123,7 +123,7 @@ https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/ReentrancyGua
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L557
 
 ## Inline Codes for Internal Function
-The following internal view function, `computeAddress()`, that is only called by `createPool()` could be embedded inline to save gas:
+The following internal view function, `_exists()`, that is only called by `_executeTokenTransfer()` could be embedded inline to save gas:
 
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L548-L558
 
