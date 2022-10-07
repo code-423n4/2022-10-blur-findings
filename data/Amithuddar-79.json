@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Amithuddar",
+  "risk": "2",
+  "title": "transferFrom() method is used instead of safeTransferFrom()",
+  "issueId": 79,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/79"
+}
