@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "ladboy233",
+  "risk": "2",
+  "title": "OVERLAP BETWEEN ERC721.TRANSFERFROM() AND ERC20.TRANSFERFROM() ALLOWS Collection asset in the order to be ERC20 token rather than ERC721 token.",
+  "issueId": 168,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/168"
+}
