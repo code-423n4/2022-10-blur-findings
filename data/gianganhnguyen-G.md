@@ -101,3 +101,7 @@ I suggest wrapping with an `unchecked` block here:
     File contracts/BlurExchange.sol, line 485:     uint256 receiveAmount = price - totalFee;
     File contracts/BlurExchange.sol, line 479:     totalFee += fee;
     File contracts/BlurExchange.sol, line 479:     totalFee += fee;
+
+# 8. [G-8] Variables: Cache read variables in memory will save gas
+
+File contracts/PolicyManager.sol, function viewWhitelistedPolicies, I suggest create a memory variable of the storage variable `_whitelistedPolicies`, and use it instead.
