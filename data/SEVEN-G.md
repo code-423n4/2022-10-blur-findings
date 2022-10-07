@@ -4,7 +4,7 @@
 ```
    if (length > _whitelistedPolicies.length() - cursor) {   //@audit gas: should cache "_whitelistedPolicies" (SLOAD 1)
             length = _whitelistedPolicies.length() - cursor; //@audit gas: should cache "_whitelistedPolicies" (SLOAD 2)
-           whitelistedPolicies[i] = _whitelistedPolicies.at(cursor + i);
+           whitelistedPolicies[i] = _whitelistedPolicies.at(cursor + i);//@audit gas: should cache "_whitelistedPolicies" (SLOAD 3)
 
 ```
 ### PolicyManager.addPolicy() 
