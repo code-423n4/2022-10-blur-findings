@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "rvierdiiev",
+  "risk": "2",
+  "title": "Malicious admin can use BlurExchange.setExecutionDelegate and BlurExchange.setPolicyManager and fool users",
+  "issueId": 119,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/119"
+}
