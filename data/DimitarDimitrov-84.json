@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "DimitarDimitrov",
+  "risk": "2",
+  "title": "Pass address of WETH as param in constructor",
+  "issueId": 84,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/84"
+}
