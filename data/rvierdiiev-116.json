@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "rvierdiiev",
+  "risk": "3",
+  "title": "Malicious ERC721 or ERC1155 contract can do not send nft to buyer during the trade",
+  "issueId": 116,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/116"
+}
