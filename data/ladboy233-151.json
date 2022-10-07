@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "ladboy233",
+  "risk": "3",
+  "title": "transfer amount can be mismatched significantly when filling order for ERC1155 token",
+  "issueId": 151,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/151"
+}
