@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "ladboy233",
+  "risk": "2",
+  "title": "Attacker contract bypass the blocked from _exists(collection) when executing the order because size := extcodesize(what) check can be bypassed.",
+  "issueId": 139,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/139"
+}
