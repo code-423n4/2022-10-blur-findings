@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "ladboy233",
+  "risk": "3",
+  "title": "User can lose their ETH and ETH is locked in the contract forever when executing the order.",
+  "issueId": 137,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/137"
+}
