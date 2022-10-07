@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "cccz",
+  "risk": "2",
+  "title": "_transferTo() calls native payable.transfer, which can be unusable for smart contract calls",
+  "issueId": 95,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/95"
+}
