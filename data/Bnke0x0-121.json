@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Bnke0x0",
+  "risk": "2",
+  "title": "ERC20 return values not checked",
+  "issueId": 121,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/121"
+}
