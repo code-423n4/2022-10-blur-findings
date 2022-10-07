@@ -16,3 +16,12 @@ https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#
 and https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L346
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L445
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L446
+
+Issue 2.
+Unclear if statement in function _transferTo
+  
+  if (amount == 0) {
+        return;
+     }
+
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L502
