@@ -42,3 +42,9 @@ Typically, storage gaps are a convention for reserving storage slots in a base c
 Please visit the bottom part of article below for further details: 
 
 https://docs.openzeppelin.com/upgrades-plugins/1.x/writing-upgradeable
+
+## Lines Too Long
+Lines in source code are typically limited to 80 characters, but it’s reasonable to stretch beyond this limit when need be as monitor screens theses days are comparatively larger. Considering the files will most likely reside in GitHub that will have a scroll bar automatically kick in when the length is over 164 characters, all code lines and comments should be split when/before hitting this length. Keep line width to max 120 characters for better readability where possible. Here is one of the instances entailed:
+
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L124
+
