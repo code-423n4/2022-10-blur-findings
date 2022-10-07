@@ -39,3 +39,19 @@ Using a helper function instead of directly incrementing i in the loop
     }
 
     for (uint256 i = 0; i < proof.length; i = unsafe_inc(i))
+
+# Gas Optimization
+
+Github Link : https://github.com/code-423n4/2022-10-blur/blob/main/contracts/PolicyManager.sol#L77
+
+Line number 77
+
+    for (uint256 i = 0; i < length; i++)
+
+Using a helper function instead of directly incrementing i in the loop
+
+    function unsafe_inc(uint x) private pure returns (uint) {
+        unchecked {    return x+1;    }
+    }
+
+    for (uint256 i = 0; i < length; i = unsafe_inc(i))
