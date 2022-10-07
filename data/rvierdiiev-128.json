@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "rvierdiiev",
+  "risk": "3",
+  "title": "Order amount value is ignored. Buyer can get less items during ERC1155 trade the he paid for.",
+  "issueId": 128,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/128"
+}
