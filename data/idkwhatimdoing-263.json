@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "idkwhatimdoing",
+  "risk": "2",
+  "title": "Token transfer do not verify that the tokens were successfully transferred",
+  "issueId": 263,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/263"
+}
