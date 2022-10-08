@@ -395,3 +395,8 @@ Using `safeTransferFrom` as we recommended above, we recommend to remove the ret
 21 - QA - `ERC1967Proxy.sol` Can be removed completely and use `@openzeppelin/contracts/proxy/ERC1967/ERC1967Upgrade.sol` instead.
 
 There is no extra functionality added on this contract, thus, be recommend to remove it and use Openzeppelin's contract instead.
+
+22 - QA - Upgrade Openzeppelin's libraries to last version:
+
+`@openzeppelin/contracts` can be upgraded from `v4.4.1` to `v4.7.3`.
+`@openzeppelin/contracts-upgradeable` can be upgraded from  `v4.6.0` to `v4.8.0-rc.1`.
