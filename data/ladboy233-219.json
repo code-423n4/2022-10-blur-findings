@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "ladboy233",
+  "risk": "3",
+  "title": "Order price can be set to 0, the buyer can get the seller's NFT for free and seller gets no token.",
+  "issueId": 219,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/219"
+}
