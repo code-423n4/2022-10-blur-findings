@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0x4non",
+  "risk": "3",
+  "title": "ERC1155 is lost when selling amount is more than 1, since `StandardPolicyERC1155` return amount is always 1",
+  "issueId": 279,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/279"
+}
