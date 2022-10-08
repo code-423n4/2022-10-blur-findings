@@ -16,6 +16,15 @@ Despite not saving any gas, it’s part of the best practices to adopt `immutabl
 
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L20-L35
 
+## `constant` Variables Should be Capitalized
+Constants should be named with all capital letters with underscores separating words if need be. Here are some of the instances entailed:
+
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L57-L58
+
+Please visit the following style guide for more details:
+
+https://docs.soliditylang.org/en/v0.8.14/style-guide.html
+
 ## Non-assembly Method Available
 Automated tools would typically flag a contract using inline-assembly as having high complexity, poor readability and error prone as far as security is concerned. As such, avoid using it where possible. For instance, the following block of codes could be replaced with:
 
@@ -44,11 +53,31 @@ Please visit the bottom part of article below for further details:
 https://docs.openzeppelin.com/upgrades-plugins/1.x/writing-upgradeable
 
 ## Lines Too Long
-Lines in source code are typically limited to 80 characters, but it’s reasonable to stretch beyond this limit when need be as monitor screens theses days are comparatively larger. Considering the files will most likely reside in GitHub that will have a scroll bar automatically kick in when the length is over 164 characters, all code lines and comments should be split when/before hitting this length. Keep line width to max 120 characters for better readability where possible. Here is one of the instances entailed:
+Lines in source code are typically limited to 80 characters, but it’s reasonable to stretch beyond this limit when need be as monitor screens theses days are comparatively larger. Considering the files will most likely reside in GitHub that will have a scroll bar automatically kick in when the length is over 164 characters, all code lines and comments should be split when/before hitting this length. Keep line width to max 120 characters for better readability where possible. Here are some of the instances entailed:
 
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L124
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L24
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L27
 
 ## Use of `ecrecover` is Susceptible to Signature Malleability
 The built-in EVM pre-compiled `ecrecover` is susceptible to signature malleability due to non-unique v and s (which may not always be in the lower half of the modulo set) values, possibly leading to replay attacks. Despite not exploitable in the current implementation with the adoption of nonces, this could prove a vulnerability when not carefully used elsewhere.
 
 Consider using OpenZeppelin’s ECDSA library which has been time tested in preventing this malleability where possible.
+
+##  Missing NatSpec
+Solidity contracts can use a special form of comments, i.e., the Ethereum Natural Language Specification Format (NatSpec) to provide rich documentation for functions, return variables and more. Please visit the following link for further details:
+
+https://docs.soliditylang.org/en/v0.8.16/natspec-format.html
+
+Here are some of the contracts found to be having inadequate NatSpec:
+
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/interfaces/IMatchingPolicy.sol
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/matchingPolicies/StandardPolicyERC721.sol
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/matchingPolicies/StandardPolicyERC1155.sol
+
+## Unchecked Return Value for `transferERC20()` Call
+In `BlurExchange.sol`, there is a call to `executionDelegate.transferERC20()` that does not check the return value:
+
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L511
+
+It is usually a good practice to add a require statement checking the return value or to use something like `safeTransfer()` unless one is sure the given token reverts in case of a failure.
