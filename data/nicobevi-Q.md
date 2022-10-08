@@ -404,3 +404,12 @@ There is no extra functionality added on this contract, thus, be recommend to re
 23 - QA - Some `./lib/EIP712.sol` functionality can be removed extending `@openzeppelin/contracts-upgradeable/utils/cryptography/EIP721Upgradeable.sol`
 
 `./lib/EIP712.sol` should extends `EIP721Upgradeable.sol` contract adding the necessary extra functionality but using what was already made on the library.
+
+24 - Remove unnecessary `pragma abicoder v2;`
+
+abicoder v2 is enabled by default on solidity 0.8. Thus, this pragma definition is not needed.
+
+Lines: 
+* https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L3
+* https://github.com/code-423n4/2022-10-blur/blob/main/contracts/ExecutionDelegate.sol#L3
+
