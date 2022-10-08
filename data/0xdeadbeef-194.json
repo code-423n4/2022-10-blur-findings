@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0xdeadbeef",
+  "risk": "2",
+  "title": "token transfers do not verify that the tokens were successfully transferred",
+  "issueId": 194,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/194"
+}
