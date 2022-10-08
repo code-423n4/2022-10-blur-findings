@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "8olidity",
+  "risk": "2",
+  "title": "ERC1155 can transfer only one token at a time",
+  "issueId": 183,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/183"
+}
