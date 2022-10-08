@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "pedr02b2",
+  "risk": "2",
+  "title": "msg.sender can grant approvals and revoke with out constraint",
+  "issueId": 280,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/280"
+}
