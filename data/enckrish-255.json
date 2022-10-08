@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "enckrish",
+  "risk": "2",
+  "title": "`execute` always transfers 1 NFT regardless of `Order.amount` due to `StandardPolicyERC1155`",
+  "issueId": 255,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/255"
+}
