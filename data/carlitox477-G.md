@@ -144,7 +144,8 @@ This will save gas avoid access it as a storage value:
     address public immutable weth; //Replaces address public weth;
     
     constructor(address _weth) initializer{
-        weth = weth
+        requiere(weth != address(0));
+        weth = weth;
     }
     /* Constructor (for ERC1967) */
     function initialize(
@@ -172,3 +173,32 @@ This will save gas avoid access it as a storage value:
         blockRange = _blockRange;
     }
 ```
+
+# BlurExchange#_exists: used just one can be writen inline to save gas
+```exists``` is just used by function ```_executeTokenTransfer```.
+
+Not inlining costs 20 to 40 gas because of two extra JUMP instructions and additional stack operations needed for function calls.
+
+# Use cutom errors rathen tan revert()/require() strings to save gas
+Custom errors are available from solidity version 0.8.4. Custom errors save [~50](https://gist.github.com/IllIllI000/ad1bd0d29a0101b25e57c293b4b0c746) gas each time they’re hit by [avoiding having to allocate and store the revert string](https://blog.soliditylang.org/2021/04/21/custom-errors/#errors-in-depth). Not defining the strings also save deployment gas. Instances found:
+* [ReentrancyGuarded#reentrancyGuard](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/lib/ReentrancyGuarded.sol#L14)
+* [PolicyManager#addPolicy](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/PolicyManager.sol#L26)
+* [PolicyManager#removePolicy](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/PolicyManager.sol#L37)
+* [ExecutionDelegate#approvedContract](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/ExecutionDelegate.sol#L22)
+* [ExecutionDelegate#transferERC721Unsafe](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/ExecutionDelegate.sol#L77)
+* [ExecutionDelegate#transferERC721](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/ExecutionDelegate.sol#L92)
+* [ExecutionDelegate#transferERC1155](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/ExecutionDelegate.sol#L108)
+* [ExecutionDelegate#transferERC20](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/ExecutionDelegate.sol#L124)
+* [BlurExchange#execute](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L139-L143)
+* [BlurExchange#setExecutionDelegate](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L219)
+* [BlurExchange#setPolicyManager](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L228)
+* [BlurExchange#setOracle](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L237)
+* [BlurExchange#_validateSignatures](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L318)
+* [BlurExchange#_recover](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L407)
+* [BlurExchange#_canMatchOrders 1](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L424)
+* [BlurExchange#_canMatchOrders 2](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L428)
+* [BlurExchange#_canMatchOrders 3](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L431)
+* [BlurExchange#_transferFees](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L482)
+* [BlurExchange#_transferTo](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L513)
+* [BlurExchange#_executeTokenTransfer](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L534)
+
