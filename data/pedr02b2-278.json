@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "pedr02b2",
+  "risk": "2",
+  "title": "missing bool return on transferFrom",
+  "issueId": 278,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/278"
+}
