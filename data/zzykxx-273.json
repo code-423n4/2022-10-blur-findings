@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "zzykxx",
+  "risk": "2",
+  "title": "A seller can avoid paying fees if he's the one calling `execute()`",
+  "issueId": 273,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/273"
+}
