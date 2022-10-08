@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "nicobevi",
+  "risk": "2",
+  "title": "Eth could get locked on contract if user executes an order with weth as paymentToken and he sends some ether attached to the execution call",
+  "issueId": 268,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/268"
+}
