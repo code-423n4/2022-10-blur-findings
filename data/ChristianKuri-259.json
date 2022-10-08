@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "ChristianKuri",
+  "risk": "2",
+  "title": "Execute function locks Ether sent to the contract when WETH path is taken",
+  "issueId": 259,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/259"
+}
