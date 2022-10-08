@@ -413,3 +413,19 @@ Lines:
 * https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L3
 * https://github.com/code-423n4/2022-10-blur/blob/main/contracts/ExecutionDelegate.sol#L3
 
+25 - Remove unused variable `merklePath` and unnecessary variables `_v`, `_r` and `_s`
+
+Lines: https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L388-L389
+
+Change this lines:
+```solidity
+(bytes32[] memory merklePath, uint8 _v, bytes32 _r, bytes32 _s) = abi.decode(extraSignature, (bytes32[], uint8, bytes32, bytes32));
+v = _v; r = _r; s = _s;
+```
+
+to
+
+```solidity
+(, v, r, s) = abi.decode(extraSignature, (bytes32[], uint8, bytes32, bytes32));
+```
+
