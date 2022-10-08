@@ -1,18 +1,21 @@
 # Low Severity Issues
 
-## [L-1] ERC-20 `transferFrom` value not checked
+## [L-1] Missing zero address checks
+`BlurExchange.initialize` doesn't check for zero address for `_weth`, `_executionDelegate`, `_policyManager`, and `_oracle`.
+
+## [L-2] ERC-20 `transferFrom` value not checked
 `transferFrom` return value, which is then returned by `ExecutionDelegate.transferERC20` is not checked to be `true` in `BlurExchange._transferTo`. Some tokens like ZRX, return `false` instead of reverting. Since the contracts are likely to use only WETH, this should not affect the proper functioning. 
 
-## [L-2] `ExecutionDelegate.transferERC20` may fail for non-standard tokens
+## [L-3] `ExecutionDelegate.transferERC20` may fail for non-standard tokens
 `ExecutionDelegate.transferERC20` assumes that `transferFrom` will always return a `bool` value. Tokens like USDT don't return a `bool`, so `transferERC20` will be reverted. Consider using a low-level call for `transferFrom` and returning the success status if it is necessary to return a `bool`. It will not be an issue if only WETH is used, which follows the standard.
 
-##  [L-3] Transfer of zero tokens
+##  [L-4] Transfer of zero tokens
 Few tokens choose to revert when trying to transfer zero tokens. When using those tokens, the transaction may get reverted in `_transferFees` if any recipient gets zero tokens. WETH doesn't revert on zero token transfer. To be on the safe side, consider checking if amount > 0 before transfers.
 
-## [L-4] Centralization of privileges
+## [L-5] Centralization of privileges
 The contracts use `ownerOnly` modifier for many crucial setter functions and can break the protocol if someone gets the access to the owner wallet. Consider using a multi-sig wallet or making a DAO the owner to decrease the risks.
 
-## [L-5] Use `type(uint256).max` for `Order.expirationTime` for oracle cancellations
+## [L-6] Use `type(uint256).max` for `Order.expirationTime` for oracle cancellations
 Currently orders with expirationTime set to 0 are settleable at any time subject to fulfillment of other conditions. Since by default it is set to 0 only, missing initialization will cause issues. It is suggested to set it to `type(uint256).max` explicitly, for oracle cancellations to prevent this.
 
 # Non-Critical
