@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "nicobevi",
+  "risk": "2",
+  "title": "`blockRange` could be set as 0 and that could result on reverted orders.",
+  "issueId": 245,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/245"
+}
