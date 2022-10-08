@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Soosh",
+  "risk": "2",
+  "title": "Use of `transfer()` to transfer ETH",
+  "issueId": 244,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/244"
+}
