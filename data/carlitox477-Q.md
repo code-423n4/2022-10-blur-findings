@@ -16,3 +16,8 @@ Manual review
 
 ## Mitigation steps:
 Add the ```reentrancyGuard``` modifier to function [cancelOrder](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L181)
+
+# [NON-CRITICAL] Expressions for contant values such as call to keccak256(), should use immutable rather than constant
+While it doesn’t save any gas because the compiler knows that developers often make this mistake, it’s still best to use the right tool for the task at hand. There is a difference between constant variables and immutable variables, and they should each be used in their appropriate contexts. constants should be used for literal values written into the code, and immutable variables should be used for expressions, or values calculated in, or passed into the constructor.
+
+Change [EIP721](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/lib/EIP712.sol#L20-L35) constant to ```immutable```
