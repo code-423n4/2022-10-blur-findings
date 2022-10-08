@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Noah3o6",
+  "risk": "2",
+  "title": "CALL() SHOULD BE USED INSTEAD OF TRANSFER() ON AN ADRESSE PAYABLE",
+  "issueId": 234,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/234"
+}
