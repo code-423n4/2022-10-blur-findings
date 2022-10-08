@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Soosh",
+  "risk": "3",
+  "title": "Loss of ERC1155 tokens by not checking for matching amounts",
+  "issueId": 240,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/240"
+}
