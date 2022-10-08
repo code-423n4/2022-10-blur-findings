@@ -12,6 +12,9 @@ Few tokens choose to revert when trying to transfer zero tokens. When using thos
 ## [L-4] Centralization of privileges
 The contracts use `ownerOnly` modifier for many crucial setter functions and can break the protocol if someone gets the access to the owner wallet. Consider using a multi-sig wallet or making a DAO the owner to decrease the risks.
 
+## [L-5] Use `type(uint256).max` for `Order.expirationTime` for oracle cancellations
+Currently orders with expirationTime set to 0 are settleable at any time subject to fulfillment of other conditions. Since by default it is set to 0 only, missing initialization will cause issues. It is suggested to set it to `type(uint256).max` explicitly, for oracle cancellations to prevent this.
+
 # Non-Critical
 
 ## [Q-1] `pragma abicoder v2` may be omitted
@@ -43,6 +46,3 @@ Unused variable at: https://github.com/code-423n4/2022-10-blur/blob/main/contrac
 ## [Q-9] Use checks-effects-interaction pattern
 While there is no risk due to the usage of a reentrancy-guard, `BlurExchange.execute` updates `cancelledOrFilled` after potentially dangerous external calls, which is not recommended practice. Consider moving these state changes above the `_execute*transfer` calls.
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L164-165
-
-## [Q-10] Use `type(uint256).max` for `Order.expirationTime` for oracle cancellations
-Currently orders with expirationTime set to 0 are settleable at any time subject to fulfillment of other conditions. Since by default it is set to 0 only, missing initialization will cause issues. It is suggested to set it to `type(uint256).max` explicitly, for oracle cancellations to prevent this.
