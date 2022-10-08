@@ -74,3 +74,7 @@ the package used is
 we recommend the project upgrade to the newest implementation of the openzepplin to avoid any known vulnerability in the openzepplin  package
 
 https://security.snyk.io/package/npm/@openzeppelin%2Fcontracts
+
+## Use deprecated payable(address).transfer instead of (payable).call
+
+https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L508
