@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "enckrish",
+  "risk": "2",
+  "title": "Use of `transfer` to send ether",
+  "issueId": 257,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/257"
+}
