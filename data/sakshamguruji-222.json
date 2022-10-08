@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "sakshamguruji",
+  "risk": "3",
+  "title": "Bypass The Require Statement On https://github.com/code-423n4/2022-10-blur/blob/main/contracts/ExecutionDelegate.sol#L77",
+  "issueId": 222,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/222"
+}
