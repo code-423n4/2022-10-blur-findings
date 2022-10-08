@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "jayphbee",
+  "risk": "2",
+  "title": "Unexpectedly sending ether may be locked into `BlurExchange`  contract if paymentToken is not ether when calling `execute`.",
+  "issueId": 221,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/221"
+}
