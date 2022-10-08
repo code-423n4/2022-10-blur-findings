@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "zzykxx",
+  "risk": "2",
+  "title": "A seller can sign a sell order of an amount `n` of `ERC1155s` but only 1 gets transferred",
+  "issueId": 271,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/271"
+}
