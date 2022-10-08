@@ -400,3 +400,7 @@ There is no extra functionality added on this contract, thus, be recommend to re
 
 `@openzeppelin/contracts` can be upgraded from `v4.4.1` to `v4.7.3`.
 `@openzeppelin/contracts-upgradeable` can be upgraded from  `v4.6.0` to `v4.8.0-rc.1`.
+
+23 - QA - Some `./lib/EIP712.sol` functionality can be removed extending `@openzeppelin/contracts-upgradeable/utils/cryptography/EIP721Upgradeable.sol`
+
+`./lib/EIP712.sol` should extends `EIP721Upgradeable.sol` contract adding the necessary extra functionality but using what was already made on the library.
