@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "nicobevi",
+  "risk": "3",
+  "title": "ERC1155 tokens can be lost if order amount is greater than 1 because the amount is hardcoded on `StandardPolicyERC1155.sol`",
+  "issueId": 246,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/246"
+}
