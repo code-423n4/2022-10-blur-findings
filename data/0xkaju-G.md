@@ -1,9 +1,17 @@
-Redundant Check
+## Redundant check
+The addPolicy() function checks if the input parameter already added to the list or not. EnumerableSet.add() function already performs this check. There is no need to do this check again.
 
-The addPolicy function checks if the input parameter has already been added to the list or not. EnumerableSet.add() function already performs this check. There is no need to perform this check again.
+    function addPolicy(address policy) external override onlyOwner {
+        require(!_whitelistedPolicies.contains(policy), "Already whitelisted");
+        _whitelistedPolicies.add(policy);
 
-Path: ./contracts/PolicyManager.sol
+        emit PolicyWhitelisted(policy);
+    }
 
-Recommendation: Remove old "require" from the function. Implement new check as 
-“require(!_whitelistedPolicies. add(policy), "Already whitelisted”)”
+There is no need to this require check instead of we can do like this: 
 
+    function addPolicy(address policy) external override onlyOwner {
+        require(_whitelistedPolicies.add(policy), "Already whitelisted");
+        
+        emit PolicyWhitelisted(policy);
+    }
