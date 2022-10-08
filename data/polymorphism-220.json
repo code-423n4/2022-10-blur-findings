@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "polymorphism",
+  "risk": "2",
+  "title": "Possible failure of sending ethers",
+  "issueId": 220,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/220"
+}
