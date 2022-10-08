@@ -1,4 +1,4 @@
-## Summary<a name="Summary">
+## Summary<a name="Summary"> 
 
 ### Low Risk Issues
 | |Issue|Instances|
@@ -11,7 +11,7 @@
 | [LOW&#x2011;6](#LOW&#x2011;6) | Low Level Calls With Solidity Version 0.8.14 Can Result In Optimiser Bug | 2 |
 | [LOW&#x2011;7](#LOW&#x2011;7) | Missing parameter validation | 1 |
 | [LOW&#x2011;8](#LOW&#x2011;8) | Usage of `payable.transfer` can lead to loss of funds  | 1 |
-| [LOW&#x2011;9](#LOW&#x2011;9) | Upgrade OpenZeppelin Contraact Dependency | 2 |
+| [LOW&#x2011;9](#LOW&#x2011;9) | Upgrade OpenZeppelin Contract Dependency | 2 |
 | [LOW&#x2011;10](#LOW&#x2011;10) | `ecrecover` may return empty address | 1 |
 | [LOW&#x2011;11](#LOW&#x2011;11) | `transferOwnership` Should Be Two Step | 1 |
 
