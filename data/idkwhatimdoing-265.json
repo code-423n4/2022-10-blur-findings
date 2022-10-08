@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "idkwhatimdoing",
+  "risk": "2",
+  "title": " Return value of enumerableset unchecked when adding or removing addresses  ",
+  "issueId": 265,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/265"
+}
