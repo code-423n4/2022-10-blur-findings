@@ -99,3 +99,30 @@ When using elements that are smaller than 32 bytes, your contract’s gas usage 
 
 Instances include:
 [`contracts/BlurExchange.sol:476`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L476)
+
+## `abi.encode()` is less efficient than `abi.encodepacked()`
+Instances include:
+[`contracts/lib/EIP712.sol:45`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L45)
+[`contracts/lib/EIP712.sol:61`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L61)
+[`contracts/lib/EIP712.sol:91`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L91)
+[`contracts/lib/EIP712.sol:107`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L107)
+[`contracts/lib/EIP712.sol:132`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L132)
+[`contracts/lib/EIP712.sol:147`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L147)
+
+## Use assembly to check for address(0)
+Saves 6 gas per instance if using assembly to check for address(0)
+e.g.
+
+```
+assembly {
+ if iszero(_addr) {
+  mstore(0x00, "zero address")
+  revert(0x00, 0x20)
+ }
+}
+```
+
+Instances include:
+[`contracts/BlurExchange.sol:219`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L219)
+[`contracts/BlurExchange.sol:228`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L228)
+[`contracts/BlurExchange.sol:237`](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L237)
