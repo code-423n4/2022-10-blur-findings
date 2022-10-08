@@ -144,8 +144,7 @@ This will save gas avoid access it as a storage value:
     address public immutable weth; //Replaces address public weth;
     
     constructor(address _weth) initializer{
-        requiere(weth != address(0));
-        weth = weth;
+        weth = weth
     }
     /* Constructor (for ERC1967) */
     function initialize(
@@ -174,12 +173,14 @@ This will save gas avoid access it as a storage value:
     }
 ```
 
+
 # BlurExchange#_exists: used just one can be writen inline to save gas
 ```exists``` is just used by function ```_executeTokenTransfer```.
 
 Not inlining costs 20 to 40 gas because of two extra JUMP instructions and additional stack operations needed for function calls.
 
-# Use cutom errors rathen tan revert()/require() strings to save gas
+
+# Use custom errors rather than revert()/require() strings to save gas
 Custom errors are available from solidity version 0.8.4. Custom errors save [~50](https://gist.github.com/IllIllI000/ad1bd0d29a0101b25e57c293b4b0c746) gas each time they’re hit by [avoiding having to allocate and store the revert string](https://blog.soliditylang.org/2021/04/21/custom-errors/#errors-in-depth). Not defining the strings also save deployment gas. Instances found:
 * [ReentrancyGuarded#reentrancyGuard](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/lib/ReentrancyGuarded.sol#L14)
 * [PolicyManager#addPolicy](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/PolicyManager.sol#L26)
@@ -202,3 +203,22 @@ Custom errors are available from solidity version 0.8.4. Custom errors save [~50
 * [BlurExchange#_transferTo](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L513)
 * [BlurExchange#_executeTokenTransfer](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L534)
 
+# Using private rather than public for constant saves gas
+If needed, the values can be read from the verified contract source code, or if there are multiple values there can be a single getter function that [returns a tuple](https://github.com/code-423n4/2022-08-frax/blob/90f55a9ce4e25bceed3a74290b854341d8de6afa/src/contracts/FraxlendPair.sol#L156-L178) of the values of all currently-public constants. Saves 3406-3606 gas in deployment gas due to the compiler not having to create non-payable getter functions for deployment calldata, not having to store the bytes of the value outside of where it’s used, and not adding another entry to the method ID table.
+* Change [EIP712 constants](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/lib/EIP712.sol#L20-L35) visibility to private 
+* Change [BlurExchange constants](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L57-L59) visibility to private 
+
+Create a single getter to get all the constant for each contract.
+
+# <array>.length should not be looked up in every loop of a for-loop
+The overheads outlined below are PER LOOP, excluding the first loop
+* storage arrays incur a Gwarmaccess (100 gas)
+* memory arrays use ```MLOAD``` (3 gas)
+* calldata arrays use ```CALLDATALOAD``` (3 gas)
+Caching the length changes each of these to a ```DUP<N>``` (3 gas), and gets rid of the extra ```DUP<N>``` needed to store the stack offset.
+
+Instances found:
+* [PolicyManager#viewWhitelistedPolicies](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/PolicyManager.sol#L77)
+* [BlurExchange#cancelOrders](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L199)
+* [BlurExchange#_transferFees](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L476)
+* [MerkleVerifier #_computeRoot](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/lib/MerkleVerifier.sol#L38)
