@@ -413,7 +413,7 @@ Lines:
 * https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L3
 * https://github.com/code-423n4/2022-10-blur/blob/main/contracts/ExecutionDelegate.sol#L3
 
-25 - Remove unused variable `merklePath` and unnecessary variables `_v`, `_r` and `_s`
+25 - QA - Remove unused variable `merklePath` and unnecessary variables `_v`, `_r` and `_s`
 
 Lines: https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L388-L389
 
@@ -428,4 +428,10 @@ to
 ```solidity
 (, v, r, s) = abi.decode(extraSignature, (bytes32[], uint8, bytes32, bytes32));
 ```
+
+26 - LOW - `chainId` must be got from `block.chainid` instead of sending it as a parameter on constructor.
+
+Line: https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L96
+
+Remove that param and use `block.chainid` instead on L109
 
