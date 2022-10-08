@@ -1,4 +1,6 @@
-### The project uses alot of boolean values as checks on functions, but at the start of blurexchange.sol  open ==1 and closed ==2 are used, which are much cheaper to use than booleans true or false. in the following listed instances it may be possible to rewrite the code to use value of 1/2 as appose to true/false to save gas on the project
+### Use 1-2 instead of true-false boolean values
+
+The project uses alot of boolean values as checks on functions, but at the start of blurexchange.sol  open ==1 and closed ==2 are used, which are much cheaper to use than booleans true or false. in the following listed instances it may be possible to rewrite the code to use value of 1/2 as appose to true/false to save gas on the project
 
 Use uint256(1) and uint256(2) for true/false to avoid a Gwarm access (100 gas) for the extra SLOAD, and to avoid Gsset (20000 gas) when changing from ‘false’ to ‘true’, after having been ‘true’ in the past
 
