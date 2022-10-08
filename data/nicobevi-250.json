@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "nicobevi",
+  "risk": "2",
+  "title": "Deprecated `.transfer()` method for ether transfer should be avoided",
+  "issueId": 250,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/250"
+}
