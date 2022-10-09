@@ -49,9 +49,6 @@ contracts/BlurExchange.sol:557:        return size > 0;
 ```
 ## [G-6]<x> += <y>` costs more gas than `<x> = <x> + <y>` 
 ```solidity
-tests/execution.test.ts:76:      tokenId += 1;
-tests/signatures.test.ts:124:        orderInput.blockNumber -= 1;
-grep: docs/exchange_architecture.png: binary file matches
 contracts/BlurExchange.sol:208:        nonces[msg.sender] += 1;
 contracts/BlurExchange.sol:479:            totalFee += fee;
 ```
