@@ -64,7 +64,7 @@ The built-in EVM pre-compiled `ecrecover` is susceptible to signature malleabili
 
 Consider using OpenZeppelin’s ECDSA library which has been time tested in preventing this malleability where possible.
 
-##  Missing NatSpec
+## Missing NatSpec
 Solidity contracts can use a special form of comments, i.e., the Ethereum Natural Language Specification Format (NatSpec) to provide rich documentation for functions, return variables and more. Please visit the following link for further details:
 
 https://docs.soliditylang.org/en/v0.8.16/natspec-format.html
@@ -74,6 +74,9 @@ Here are some of the contracts found to be having inadequate NatSpec:
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/interfaces/IMatchingPolicy.sol
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/matchingPolicies/StandardPolicyERC721.sol
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/matchingPolicies/StandardPolicyERC1155.sol
+
+## Devoid of System Documentation and Complete Technical Specification
+A system’s design specification and supporting documentation should be almost as important as the system’s implementation itself. Users rely on high-level documentation to understand the big picture of how a system works. Without spending time and effort to create palatable documentation, a user’s only resource is the code itself, something the vast majority of users cannot understand. Security assessments depend on a complete technical specification to understand the specifics of how a system works. When a behavior is not specified (or is specified incorrectly), security assessments must base their knowledge in assumptions, leading to less effective review. Maintaining and updating code relies on supporting documentation to know why the system is implemented in a specific way. If code maintainers cannot reference documentation, they must rely on memory or assistance to make high-quality changes. Currently, the only documentation for Growth DeFi is a single README file, as well as code comments.
 
 ## Unchecked Return Value for `transferERC20()` Call
 In `BlurExchange.sol`, there is a call to `executionDelegate.transferERC20()` that does not check the return value:
@@ -95,3 +98,4 @@ https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#
 That way, the following code lines in `_transferTo()` may be removed since `amount == 0` has already been taken of in the above code line:
 
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L502-L504
+
