@@ -106,3 +106,22 @@ You could do something like this to save gas;
 
          return (whitelistedPolicies, cursor + length);
 ```
+
+## Upgrade Openzeppelin to latest version
+If you do so you will save lot of gas..
+
+With current (@openzeppelin/contracts 4.4.1 & @openzeppelin/contracts-upgradeable 4.6.0)
+```
+······················|························|·············|·············|·············|···············|··············
+|  Contract           ·  Method                ·  Min        ·  Max        ·  Avg        ·  # calls      ·  eur (avg)  │
+······················|························|·············|·············|·············|···············|··············
+|  BlurExchange       ·  execute               ·     244937  ·     282894  ·     272762  ·           20  ·          -  │
+``` 
+
+With latest version of @openzeppelin/contracts & @openzeppelin/contracts-upgradeable
+```
+······················|························|·············|·············|·············|···············|··············
+|  Contract           ·  Method                ·  Min        ·  Max        ·  Avg        ·  # calls      ·  eur (avg)  │
+······················|························|·············|·············|·············|···············|··············
+|  BlurExchange       ·  execute               ·     244287  ·     282420  ·     272336  ·           20  ·          -  │
+```
