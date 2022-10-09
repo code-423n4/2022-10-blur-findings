@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Trust",
+  "risk": "2",
+  "title": "If ERC20 tokens that return false on failure are added as a payment option, buyer could call execute() and receive the NFT even though they did not pay for it.",
+  "issueId": 376,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/376"
+}
