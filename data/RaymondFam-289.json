@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "RaymondFam",
+  "risk": "2",
+  "title": "Use of `transfer()` Could Render ETH Impossible to Transfer",
+  "issueId": 289,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/289"
+}
