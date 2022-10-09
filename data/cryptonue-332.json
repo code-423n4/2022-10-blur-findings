@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "cryptonue",
+  "risk": "3",
+  "title": "Token transferred of ERC1155-type order will always be 1",
+  "issueId": 332,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/332"
+}
