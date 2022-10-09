@@ -24,3 +24,11 @@ make timelock and wait some time for owner to remove policys
     }
 ```
 https://github.com/code-423n4/2022-10-blur/blob/d1c22a94ed08b08fe3f7d5c96e973d80d3dc0e54/contracts/PolicyManager.sol#L37
+## small fees will be zero and not send money  because of  a small peression error
+if `price*feeds[i].rate <10,000`  then the fee would be zero
+```
+uint256 fee = (price * fees[i].rate) / INVERSE_BASIS_POINT;
+_transferTo(paymentToken, from, fees[i].recipient, fee);
+```
+The reason its low risk is because the price and fees most likely be under 10_000
+https://github.com/code-423n4/2022-10-blur/blob/d1c22a94ed08b08fe3f7d5c96e973d80d3dc0e54/contracts/BlurExchange.sol#L477
