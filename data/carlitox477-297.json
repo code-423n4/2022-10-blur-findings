@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "carlitox477",
+  "risk": "2",
+  "title": "# BlurExchange#execute allow front-running ERC-1155 sells due to ```canMatchMakerAsk``` and ```canMatchMakerBid``` functions",
+  "issueId": 297,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/297"
+}
