@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Ben",
+  "risk": "2",
+  "title": "execute() may lock ether sent to the contract",
+  "issueId": 397,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/397"
+}
