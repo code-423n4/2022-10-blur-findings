@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "ladboy233",
+  "risk": "3",
+  "title": "revokedApproval access control does not work when user pay in ETH instead of WETH",
+  "issueId": 328,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/328"
+}
