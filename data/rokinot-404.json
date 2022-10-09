@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "rokinot",
+  "risk": "2",
+  "title": "ERC1155 tokens are hardcoded to transfer only 1 token, which may lead to users overpaying orders",
+  "issueId": 404,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/404"
+}
