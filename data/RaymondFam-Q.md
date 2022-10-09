@@ -95,7 +95,7 @@ https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#
 ```
         require(totalFee < price, "Total amount of fees are more than the price");
 ```
-That way, the following code lines in `_transferTo()` may be removed since `amount == 0` has already been taken of in the above code line:
+That way, the following code lines in `_transferTo()` may be removed since `amount == 0` has already been taken of in the above code line inclusive of its proper error handling:
 
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L502-L504
 
