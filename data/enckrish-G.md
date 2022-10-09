@@ -38,3 +38,6 @@ modifier reentrancyGuard {
     reentrancyLock = 0;
 }
 ```
+
+## [G-4] Loop variable increment can be done inside `unchecked` block
+There are 5 instances across the codebase, where the loop is bounded to the length of an array. In these cases, the loop variable can not overflow, and can be safely incremented inside a `unchecked` block to save gas.
