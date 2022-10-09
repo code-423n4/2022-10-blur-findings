@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0xSmartContract",
+  "risk": "2",
+  "title": "The `_hashOrder` function has the \"Error related to nested arrays with ABI encoding from direct call data\" issue in Solidity 0.8.13",
+  "issueId": 417,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/417"
+}
