@@ -1,6 +1,5 @@
  ## `++i` cost less gas compared to `i++`. Consider using `++{variable}` instead of `{variable}++` 
  ### Files Found: 
- There are 6 instances of this issue. 
  - File: contracts/BlurExchange.sol - line 199 
  - File: contracts/BlurExchange.sol - line 476 
  - File: contracts/PolicyManager.sol - line 77 
@@ -12,7 +11,6 @@ Consider using `++i` instead of `i++`
  
  ## Using private rather than public for constants, saves gas 
  ### Files Found: 
- There are 3 instances of this issue. 
  - File: contracts/BlurExchange.sol - line 57 
  - File: contracts/BlurExchange.sol - line 58 
  - File: contracts/BlurExchange.sol - line 59 
@@ -23,7 +21,6 @@ Consider using `++i` instead of `i++`
  --- 
  ## `x += y` costs more gas than `x = x + y` for state variables 
  ### Files Found: 
- There are 2 instances of this issue. 
  - File: contracts/BlurExchange.sol - line 208 
  - File: contracts/BlurExchange.sol - line 479 
  
@@ -42,3 +39,4 @@ Consider using `++i` instead of `i++`
 uint is initialised at 0. It cost more gas to initialise variable at 0 
 
 --- 
+
