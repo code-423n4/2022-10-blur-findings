@@ -138,3 +138,8 @@ OpenZeppelin maintains a library of standard, audited, community-reviewed, and b
 Consider importing the OpenZeppelin contracts instead of reimplementing or copying them. These contracts can be extended to add the extra functionalities required by Blur Exchange. Here is one of the instances entailed:
 
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/ReentrancyGuarded.sol
+
+## `block.timestamp` Unreliable
+`_canSettleOrder()` in `BlurExchange.sol` uses `block.timestamp` as part of its time checks. Nevertheless, timestamps can be slightly altered by miners/validators to favor them in contracts that have logics that depend strongly on them.
+
+Consider taking into account this issue and warning the users that such a scenario could happen. If the alteration of timestamps cannot affect the protocol in any way, consider documenting the reasoning and writing tests enforcing that these guarantees will be preserved even if the code changes in the future.
