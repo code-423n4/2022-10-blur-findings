@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Franfran",
+  "risk": "2",
+  "title": "No check for token compliance may lead to funds stealing",
+  "issueId": 402,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/402"
+}
