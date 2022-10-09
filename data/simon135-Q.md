@@ -32,3 +32,38 @@ _transferTo(paymentToken, from, fees[i].recipient, fee);
 ```
 The reason its low risk is because the price and fees most likely be under 10_000
 https://github.com/code-423n4/2022-10-blur/blob/d1c22a94ed08b08fe3f7d5c96e973d80d3dc0e54/contracts/BlurExchange.sol#L477
+## if user suppies a lot of fees then there can be dos
+there is no aggreement on fees and how much fees to take  but it dosnt effect how much the buyer pays.
+##  a malious fee recipent can make the call revert because of transfer works
+don’t use `.transfer`  it  not good and it takes 2300 gas which can revert really easliy 
+.transfer
+```
+payable(to).transfer(amount);
+```
+## if the collection is different then the asset there can be loss of funds
+or the collection is not eip complicance and dont use regular TransferFrom because the erc721 can be stuff if you use the wrong asset.
+```
+function _executeTokenTransfer(
+address collection,
+address from,
+address to,
+uint256 tokenId,
+uint256 amount,
+AssetType assetType
+) internal {
+/* Assert collection exists. */
+require(_exists(collection), "Collection does not exist");
+/* Call execution delegate. */
+if (assetType == AssetType.ERC721) {
+executionDelegate.transferERC721(collection, from, to, tokenId);
+} else if (assetType == AssetType.ERC1155) {
+executionDelegate.transferERC1155(
+collection,
+from,
+to,
+tokenId,
+amount
+);
+}
+}
+``` 
