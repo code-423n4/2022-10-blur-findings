@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "martin",
+  "risk": "2",
+  "title": "M-01 Return values of `transfer()`/`transferFrom()` not checked",
+  "issueId": 320,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/320"
+}
