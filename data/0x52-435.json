@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0x52",
+  "risk": "3",
+  "title": "StandardPolicyERC1155#canMatchMakerAsk and canMatchMakerBid return the incorrect amount of ERC1155 tokens to receive",
+  "issueId": 435,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/435"
+}
