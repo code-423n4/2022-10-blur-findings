@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Trust",
+  "risk": "2",
+  "title": "Attacking trader can freely choose if he is taker or maker in OrdersMatched() event emitted. ",
+  "issueId": 366,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/366"
+}
