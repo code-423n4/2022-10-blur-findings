@@ -10,3 +10,13 @@
 When using the transferFrom function of an ERC721 contract to send an NFT, if the receiving address is a smart contract and does not support ERC721, the NFT can be frozen in the contract. Use the ERC721 contract's safeTransferFrom function to send NFTs. 
 
  --- 
+
+## Unused/empty `receive()/fallback()` function 
+ ### Files Found: 
+ There are 1 instances of this issue. 
+ - File: contracts/BlurExchange.sol - line 53 
+ 
+ ### Mitigation: 
+ Either implement, emit or remove the empty callback 
+
+ --- 
