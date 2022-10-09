@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Koolex",
+  "risk": "2",
+  "title": "Possible failure of ETH funds trnsfer if the seller/recipient is a smart contract",
+  "issueId": 329,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/329"
+}
