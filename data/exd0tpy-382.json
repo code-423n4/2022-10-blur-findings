@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "exd0tpy",
+  "risk": "2",
+  "title": "Some NFT that implement ERC721 and ERC1155 could be lead to misfunction.",
+  "issueId": 382,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/382"
+}
