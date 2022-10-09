@@ -81,3 +81,17 @@ In `BlurExchange.sol`, there is a call to `executionDelegate.transferERC20()` th
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L511
 
 It is usually a good practice to add a require statement checking the return value or to use something like `safeTransfer()` unless one is sure the given token reverts in case of a failure.
+
+## Inappropriate Use of Conditional Checks
+It is always a good practice to utilize conditional checks correctly and do it as earliest as possible.     
+
+The following line of code in `_transferFees()` should be refactored to:
+
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L482
+
+```
+        require(totalFee < price, "Total amount of fees are more than the price");
+```
+That way, the following code lines in `_transferTo()` may be removed since `amount == 0` has already been taken of in the above code line:
+
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L502-L504
