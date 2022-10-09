@@ -99,3 +99,7 @@ That way, the following code lines in `_transferTo()` may be removed since `amou
 
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L502-L504
 
+## Use `safeTransferFrom` instead of `transferFrom`
+ERC721 has both `safeTransferFrom` and `transferFrom`, where `safeTransferFrom` throws an error if the receiving contract's onERC721Received method doesn't return a specific magic number. This will ensure a receiving contract is capable of receiving the token to prevent a permanent loss. In the light of this, consider disabling `transferERC721Unsafe()` (whose function logic entails `transferFrom`) in `ExecutionDelegate.sol` where possible. 
+
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/ExecutionDelegate.sol#L73-L79
