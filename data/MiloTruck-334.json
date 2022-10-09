@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "MiloTruck",
+  "risk": "2",
+  "title": "Misleading matching policy for ERC1155 tokens",
+  "issueId": 334,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/334"
+}
