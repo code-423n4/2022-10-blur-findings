@@ -67,3 +67,5 @@ amount
 }
 }
 ``` 
+## if someone executes a trade and right before the seller increasing the nonce and makes the tx revert 
+I think  this  is an  low issue but  i think that is intended and its to bad that  the exuctor wasted there  gas but  the seller/buyer didnt want to  trade but it can make the  seller/buyer  malicious and cost a waste of txs.
