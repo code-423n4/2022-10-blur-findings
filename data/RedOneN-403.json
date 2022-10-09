@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "RedOneN",
+  "risk": "2",
+  "title": "USE SAFETRANSFER()/SAFETRANSFERFROM() INSTEAD OF TRANSFER()/TRANSFERFROM()",
+  "issueId": 403,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/403"
+}
