@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "caventa",
+  "risk": "3",
+  "title": "Order matching may fail sillenty if the trader or one of the order's fee recipient is a contract address that rejects native token deposited",
+  "issueId": 354,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/354"
+}
