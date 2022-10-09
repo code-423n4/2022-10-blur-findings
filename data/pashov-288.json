@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "pashov",
+  "risk": "2",
+  "title": "User might mistakenly use `weth` as `paymentToken` but still send ETH, resulting in a loss of funds",
+  "issueId": 288,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/288"
+}
