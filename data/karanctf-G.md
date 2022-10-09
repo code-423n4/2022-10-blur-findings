@@ -52,3 +52,14 @@ contracts/BlurExchange.sol:557:        return size > 0;
 contracts/BlurExchange.sol:208:        nonces[msg.sender] += 1;
 contracts/BlurExchange.sol:479:            totalFee += fee;
 ```
+## [G-7] Initialise vairable outside of loop
+```solidity=
+contracts/BlurExchange.sol:477:            uint256 fee = (price * fees[i].rate) / INVERSE_BASIS_POINT;
+contracts/lib/MerkleVerifier.sol:39:            bytes32 proofElement = proof[i];
+
+```
+## [G-8] Use `10000`  in place of `INVERSE_BASIS_POINT` instead of reading it again and again inside for loop it won't change as it is initilized as constant
+```solidity
+contracts/BlurExchange.sol:477:            uint256 fee = (price * fees[i].rate) / INVERSE_BASIS_POINT;
+
+```
