@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "SooYa",
+  "risk": "2",
+  "title": "Use `safeTransferFrom()` instead of `transferFrom()`",
+  "issueId": 349,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/349"
+}
