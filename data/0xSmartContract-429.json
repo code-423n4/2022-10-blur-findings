@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0xSmartContract",
+  "risk": "2",
+  "title": "The `whenOpen` modifier just pauses the `execute`  function",
+  "issueId": 429,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/429"
+}
