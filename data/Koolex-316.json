@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Koolex",
+  "risk": "2",
+  "title": "ETH can be sent over mistakely with the call when the paymentToken is weth",
+  "issueId": 316,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/316"
+}
