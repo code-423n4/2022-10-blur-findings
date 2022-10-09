@@ -103,3 +103,28 @@ https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#
 ERC721 has both `safeTransferFrom` and `transferFrom`, where `safeTransferFrom` throws an error if the receiving contract's onERC721Received method doesn't return a specific magic number. This will ensure a receiving contract is capable of receiving the token to prevent a permanent loss. In the light of this, consider disabling `transferERC721Unsafe()` (whose function logic entails `transferFrom`) in `ExecutionDelegate.sol` where possible. 
 
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/ExecutionDelegate.sol#L73-L79
+
+## External Call in Loop Could Lead to Denial of Service
+Function calls made in unbounded loop are error-prone with potential resource exhaustion as it can trap the contract due to the gas limitations or failed transactions. Here is one of the instances entailed:
+
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L198-L202
+
+Consider bounding the loop where possible to avoid unnecessary gas wastage and denial of service.
+
+## Complementary Check for Contract Existence
+`_exists()` in `BlurExchange.sol` could at most check the existence of a contract address, serving a great way to shun externally owned accounts (EOA). It cannot, however, tell whether or not it is a matching contract address. Consider adding an optional codehash by having the function refactored to:
+
+```
+    function _exists(address what, bytes32 whatCodeHash)
+        internal
+        view
+        returns (bool)
+    {
+        uint size;
+        assembly {
+            size := extcodesize(what)
+        }
+        return (size > 0 && what.codehash == whatCodeHash);
+    }
+```
+Note: `whatCodeHash` will need to be added to the struct `Order`.
