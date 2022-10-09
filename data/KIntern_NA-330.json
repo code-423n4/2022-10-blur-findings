@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "KIntern_NA",
+  "risk": "2",
+  "title": "Attacker can bypass `listingTime` to become maker can be potential risk for future upgrade ",
+  "issueId": 330,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/330"
+}
