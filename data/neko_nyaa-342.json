@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "neko_nyaa",
+  "risk": "2",
+  "title": "Two orders of the same trader can be matched, leading to loss of funds from fees",
+  "issueId": 342,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/342"
+}
