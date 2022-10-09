@@ -177,7 +177,7 @@ https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c
 
 ### onlyOwner function modifier
 
-If a function modifier such as onlyOwner is used, the function will revert if a normal user tries to pay the function.marking the function as payable will save gas because the compiler will not include checks for whether a payment was provided. 
+If a function modifier such as onlyOwner is used, the function will revert if a normal user tries to call the function.marking the function as payable will save gas because the compiler will not include checks for whether a payment was provided. 
 
 instances found 
 
