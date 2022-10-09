@@ -53,6 +53,7 @@ This will ensure that when `chain.id` changes, it will update the `DOMAIN_SEPERA
 
 More details: https://eips.ethereum.org/EIPS/eip-1344#rationale
 
+Affected: https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/lib/EIP712.sol#L49
 
 ---
 ### `ecrecover()` not checked for address(0) signer
@@ -68,3 +69,4 @@ function _recover(
 }
 ```
 Bad practice, although I see no way in the protocols current implementation where it could be exploited.
+Affected: https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L408
