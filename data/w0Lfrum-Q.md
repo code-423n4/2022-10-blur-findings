@@ -3,7 +3,7 @@
 ### Summary
 
 The overall code is well-commented. Unit tests are provided. The logic is split into the corresponding files. The logic is clear when referring to the docs/information given in the code4rena contest page.
-There can be improvements in the code by eliminating redundant lines of code which have no affect on the overall logic or state. For example, removing the lines of code which specify "pragma abicoder v2", which is not required as abicoder v2 is set by default in recent compiler versions.
+There can be improvements in the code by eliminating redundant lines of code which have no effect on the overall logic or state. For example, removing the lines of code which specify "pragma abicoder v2", which is not required as abicoder v2 is set by default in recent compiler versions.
 However, the overall contract size of BlurExchange.sol file exceeds 24576 bytes size limit set in the Spurious Dragon hard fork. 
 Hence it is recommended to use libraries, remove some of the string error messages in `require` statements and eliminate any unused local variables that may be declared, but unused in the contract. 
 
