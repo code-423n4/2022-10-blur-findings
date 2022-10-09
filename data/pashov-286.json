@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "pashov",
+  "risk": "2",
+  "title": "Cached value of `chainId` can result in a cross-chain replay attack",
+  "issueId": 286,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/286"
+}
