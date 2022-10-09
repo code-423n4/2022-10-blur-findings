@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "eierina",
+  "risk": "2",
+  "title": "Indefinite caching of domain separator allows reuse of signatures across forks",
+  "issueId": 337,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/337"
+}
