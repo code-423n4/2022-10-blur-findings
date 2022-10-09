@@ -9,15 +9,7 @@
 Consider using `++i` instead of `i++` 
 
 ---- 
- ## Unused/empty `receive()/fallback()` function 
- ### Files Found: 
- There are 1 instances of this issue. 
- - File: contracts/BlurExchange.sol - line 53 
  
- ### Mitigation: 
- Either implement, emit or remove the empty callback 
-
- --- 
  ## Using private rather than public for constants, saves gas 
  ### Files Found: 
  There are 3 instances of this issue. 
