@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0xSmartContract",
+  "risk": "3",
+  "title": "Nonce architecture is vulnerable",
+  "issueId": 420,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/420"
+}
