@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0xSmartContract",
+  "risk": "2",
+  "title": "For tokens that do not implement the EIP20 standard correctly, the transferERC20 function will not work",
+  "issueId": 413,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/413"
+}
