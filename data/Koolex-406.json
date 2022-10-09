@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Koolex",
+  "risk": "3",
+  "title": "Transferring WETH will always fail if weth was set wrongly in the constructor",
+  "issueId": 406,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/406"
+}
