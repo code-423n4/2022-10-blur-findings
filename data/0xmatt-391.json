@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0xmatt",
+  "risk": "2",
+  "title": "ERC20.Transfer() return values unchecked, leading to possible loss of funds.",
+  "issueId": 391,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/391"
+}
