@@ -20,3 +20,14 @@ When using the transferFrom function of an ERC721 contract to send an NFT, if th
  Either implement, emit or remove the empty callback 
 
  --- 
+
+## Findings: State variables only set in the constructor should be declared immutable
+
+### Files Found:
+
+- [https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L63](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L97)
+- Line 63 - 66
+
+### Mitigation:
+
+Where a storage variable is assigned only once. These variables should be declared immutable.
