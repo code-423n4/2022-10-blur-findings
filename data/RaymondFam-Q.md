@@ -128,3 +128,6 @@ Consider bounding the loop where possible to avoid unnecessary gas wastage and d
     }
 ```
 Note: `whatCodeHash` will need to be added to the struct `Order`.
+
+## Discrepancy Between Code and Comments
+There is a mismatch between what the code implements and what the corresponding comment describes that code implements. For instance, in `BlurExchange.sol`, an array of fees is deducted from seller's price, but the fees aren't paid to anyone. The fees and variable name should be termed as discount/rebate instead. Consider updating the code and/or the comment to be consistent.
