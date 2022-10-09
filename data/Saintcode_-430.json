@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Saintcode_",
+  "risk": "2",
+  "title": "[Denial-of-Service] Fee Receiver Could Block Users From Executing An Order",
+  "issueId": 430,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/430"
+}
