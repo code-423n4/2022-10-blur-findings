@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0x52",
+  "risk": "2",
+  "title": "BlurExchange#_validateOracleAuthorization does not work as intended for bulk orders",
+  "issueId": 834,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/834"
+}
