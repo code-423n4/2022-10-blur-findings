@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "djxploit",
+  "risk": "3",
+  "title": "`_transferFees` is vulnerable to DOS",
+  "issueId": 495,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/495"
+}
