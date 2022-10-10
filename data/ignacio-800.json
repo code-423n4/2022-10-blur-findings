@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "ignacio",
+  "risk": "2",
+  "title": "USE OF SOLIDITY VERSION 0.8.14 WHICH HAS KNOWN ISSUES APPLICABLE TO  Blur Exchange",
+  "issueId": 800,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/800"
+}
