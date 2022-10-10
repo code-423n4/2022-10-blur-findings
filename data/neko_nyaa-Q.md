@@ -1,3 +1,12 @@
+
+|   | Title  | Risk  |
+|---|---|:---:|
+| 1  | There is no cap on the transfer fee  | Low | 
+| 2  | Seller bearing all fees is an inconvenient and unconventional way to do it, furthermore this is not properly documented  | Low  | 
+| 3  | `require` statements should come with reason string if possible  | QA | 
+| 4  | Function is unused anywhere | QA  | 
+| 5  | Non-assembly method available  | QA | 
+
 # Low-risk findings
 
 ## [L-01] There is no cap on the transfer fee
