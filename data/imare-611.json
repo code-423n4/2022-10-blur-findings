@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "imare",
+  "risk": "2",
+  "title": "Using ETH as the ``paymentToken`` will make sellers wait for buyers to call ``execute`` But using WETH instead anyone at anytime can call ``execute`` on a matching orders pair",
+  "issueId": 611,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/611"
+}
