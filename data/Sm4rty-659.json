@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Sm4rty",
+  "risk": "2",
+  "title": " call() should be used instead of transfer() on an address payable",
+  "issueId": 659,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/659"
+}
