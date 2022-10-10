@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "joestakey",
+  "risk": "2",
+  "title": "`_executeTokenTransfer()` can silently fail for malicious ERC721 implementations.",
+  "issueId": 710,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/710"
+}
