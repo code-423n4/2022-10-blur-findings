@@ -1,0 +1,2 @@
+In https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L478
+for every entries in the array, the transferTo function will transfer fees to fee's recipient one by one. For an exchange, the fee's recipient is the exchange's treasury which should be same. So in order to save gas, it is suggested to add up all fees and then send all fee for the transactions in the array in one solid transferTo function.
