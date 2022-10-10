@@ -58,4 +58,13 @@ The function here https://github.com/code-423n4/2022-10-blur/blob/main/contracts
 #### Remediation
 Use isContract function provided by OpenZepplin instead https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol
 
+
+## No revert strings in require conditions
+There should always be revert strings in require conditions for better code readability and understanding what the error was when one occurs.
+
+Instances of this issue:
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L134
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L183
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L452
+
  
