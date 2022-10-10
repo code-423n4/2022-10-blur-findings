@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "rbserver",
+  "risk": "2",
+  "title": "Users can be unable to fill valid orders that are signed by using `web3.eth.sign` because corresponding signatures can have `v` being 0 or 1",
+  "issueId": 613,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/613"
+}
