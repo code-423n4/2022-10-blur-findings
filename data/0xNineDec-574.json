@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0xNineDec",
+  "risk": "3",
+  "title": "Signatures can be reused across forked chains",
+  "issueId": 574,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/574"
+}
