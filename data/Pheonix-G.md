@@ -1,3 +1,5 @@
+# REPORT
+
 |  | Issue | Instances |
 | --- | --- | --- |
 | [G-01] | ++icosts less gas than i++, especially when it's used in for-loops (--i/i-- too) | 5 |
@@ -9,8 +11,10 @@
 | [G-07] | abi.encode() is less efficient than abi.encodePacked() | 4 |
 | [G-08] | It costs more gas to initialize variables with their default value than letting the default value be applied | 5 |
 | [G-09] | Using storage instead of memory for structs/arrays | 2 |
+| [G-10] | Bytes constant are cheaper than string constants | 1 |
+|  |  |  |
 
-## `++i`costs less gas than `i++`, especially when it's used in `for`-loops (`--i`/`i--` too)
+# [G-01] `++i`costs less gas than `i++`, especially when it's used in `for`-loops (`--i`/`i--` too)
 
 ++i costs less gas compared to i++ or i += 1 for unsigned integer, as pre-increment is cheaper (about 5 gas per iteration)
 
@@ -46,7 +50,7 @@ uint i = 1;
 
 In the first case, the compiler has to create a temporary variable (when used) for returning `1` instead of `2`
 
-# **Instances** -
+## **Instances** -
 
 ### **File - BlurExchange.sol**
 
@@ -70,14 +74,13 @@ In the first case, the compiler has to create a temporary variable (when used) f
 
 Replace i++ with ++i
 
-
-## **Use Custom Errors instead of Revert Strings to save Gas**
+# [G-02] **Use Custom Errors instead of Revert Strings to save Gas**
 
 1. Custom errors from Solidity 0.8.4 are cheaper than revert strings (cheaper deployment cost and runtime cost when the revert condition is met) Custom errors save ~50 gas each time they’re hit by avoiding having to allocate and store the revert string. Not defining the strings also save deployment gas
 
 Custom errors are defined using the error statement, which can be used inside and outside of contracts (including interfaces and libraries). see [Source](https://blog.soliditylang.org/2021/04/21/custom-errors/)
 
-## **INSTANCES**
+### **INSTANCES**
 
 ### **File - BlurExchange.sol**
 
@@ -140,7 +143,7 @@ Custom errors are defined using the error statement, which can be used inside an
 
 Replace require and revert statements with custom errors.
 
-## **Cache the length of arrays in loops**
+# [G-03] **Cache the length of arrays in loops**
 
 The solidity compiler will always read the length of the array during each iteration. That is,
 
@@ -160,7 +163,7 @@ The overheads outlined below are *PER LOOP*, excluding the first loop
 
 Caching the length changes each of these to a `DUP<N>` (**3 gas**), and gets rid of the extra `DUP<N>` needed to store the stack offset
 
-## **INSTANCES -**
+### **INSTANCES -**
 
 ### File - BlurExchange.sol
 
@@ -188,7 +191,7 @@ Caching the length changes each of these to a `DUP<N>` (**3 gas**), and gets rid
 
 Caching the length in a variable before the `for` loop.
 
-## **Using `private` rather than `public` for constants, saves gas**
+# [G-04] **Using `private` rather than `public` for constants, saves gas**
 
 If needed, the values can be read from the verified contract source 
 code, or if there are multiple values there can be a single getter 
@@ -197,7 +200,7 @@ getter functions for deployment calldata, not having to store the bytes
 of the value outside of where it's used, and not adding another entry to
 the method ID table
 
-## **Instances -**
+### **Instances -**
 
 ### **File - BlurExchange.sol**
 
@@ -227,12 +230,12 @@ the method ID table
 
 Make the constants `private` instead of `public`.
 
-## **Constant expressions**
+# [G-05] **Constant expressions**
 
 Constant expressions are [re-calculated each time they are in use](https://github.com/ethereum/solidity/issues/9232) , costing an extra `97`
  gas than a constant every time they are called.
 
-## Instances -
+### Instances -
 
 ### **File - EIP712.sol**
 
@@ -244,7 +247,7 @@ Constant expressions are [re-calculated each time they are in use](https://githu
 
 Mark these as `immutable` instead of `constant`.
 
-## **Using `bool` for storage incurs overhead**
+# [G-06] **Using bool for storage incurs overhead**
 
 Booleans are more expensive than uint256 or any type that 
 takes up a full word because each write operation emits an extra SLOAD 
@@ -254,7 +257,7 @@ contract upgrades and pointer aliasing, and it cannot be disabled.
 
 Consider doing like here: [https://github.com/OpenZeppelin/openzeppelin-contracts/blob/58f635312aa21f947cae5f8578638a85aa2519f5/contracts/security/ReentrancyGuard.sol#L23-L27](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/58f635312aa21f947cae5f8578638a85aa2519f5/contracts/security/ReentrancyGuard.sol#L23-L27) . They are using `uint256(1)` and `uint256(2)` for true/false to avoid the extra SLOAD (**100 gas**) and the extra SSTORE (**20000 gas**) when changing from `false` to `true`, after having been `true` in the past:
 
-## **Instances -**
+### **Instances -**
 
 ### **File - BlurExchange.sol**
 
@@ -271,10 +274,12 @@ state mapping -
 
 10:     bool reentrancyLock = false;
 
-## **abi.encode() is less efficient than abi.encodePacked()**
+# [G-07] **abi.encode() is less efficient than abi.encodePacked()**
 
 Changing `abi.encode` function to `abi.encodePacked`
  can save gas since the `abi.encode` function pads extra null bytes at the end of the call data, which is unnecessary. Also, in general, `abi.encodePacked` is more gas-efficient (see [Solidity-Encode-Gas-Comparison](https://github.com/ConnorBlockchain/Solidity-Encode-Gas-Comparison)).
+
+### Instances-
 
 ### File: EIP712.sol
 
@@ -330,7 +335,7 @@ Changing `abi.encode` function to `abi.encodePacked`
 
 Change  `abi.encode` function to `abi.encodePacked`
 
-## **It costs more gas to initialize variables with their default value than letting the default value be applied**
+# [G-08] **It costs more gas to initialize variables with their default value than letting the default value be applied**
 
 If a variable is not set/initialized, it is assumed to have the default value (`0`
 for `uint`, `false`for `bool`, `address(0)`for address...). Explicitly initializing it with its default value is an anti-pattern and wastes gas (around **3 gas** per instance).
@@ -359,7 +364,7 @@ for `uint`, `false`for `bool`, `address(0)`for address...). Explicitly initializ
 
 Consider removing explicit initializations for default values.
 
-## **Using `storage` instead of `memory` for structs/arrays**
+# [G-09] **Using storage instead of memory for structs/arrays**
 
 When fetching data from a storage location, assigning the data to a `memory`
  variable causes all fields of the struct/array to be read from storage, which incurs a Gcoldsload (**2100 gas** ) for *each* field of the struct/array. If the fields are read from the new memory variable, they incur an additional `MLOAD` rather than a cheap stack read. Instead of declearing the variable with the `memory`
@@ -376,3 +381,13 @@ struct/array into a `memory` variable, is if the full struct/array is being retu
 ### File: PolicyManager.sol
 
 75:         address[] memory whitelistedPolicies = new address;
+
+# [G-10] **Bytes constant are cheaper than string constants**
+
+f the string can fit into 32 bytes, then `bytes32` is cheaper than `string` . `string`is a dynamically sized-type, which has current limitations in Solidity compared to a statically sized variable.
+
+## **Instances -**
+
+### File: BlurExchange.sol
+
+57:     string public constant name = "Blur Exchange";
