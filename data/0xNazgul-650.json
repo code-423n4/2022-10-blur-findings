@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0xNazgul",
+  "risk": "2",
+  "title": "[NAZ-M5] Use `safeTransfer()/safeTransferFrom()` instead of `transfer()/transferFrom()`",
+  "issueId": 650,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/650"
+}
