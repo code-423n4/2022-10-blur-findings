@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "arcoun",
+  "risk": "2",
+  "title": "Oracle authorization can be bypassed while no oracle is set",
+  "issueId": 573,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/573"
+}
