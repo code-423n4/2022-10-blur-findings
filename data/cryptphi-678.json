@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "cryptphi",
+  "risk": "2",
+  "title": "BlurExchange.initialize() can be frontrunned",
+  "issueId": 678,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/678"
+}
