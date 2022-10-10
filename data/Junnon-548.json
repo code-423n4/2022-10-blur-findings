@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Junnon",
+  "risk": "2",
+  "title": "Seller can avoid to transfer NFT by list a ERC721 NFT that use `fallback()` function as ERC1155 and vice versa.",
+  "issueId": 548,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/548"
+}
