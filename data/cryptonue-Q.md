@@ -53,7 +53,7 @@ Consider implementing a transfer-accept ownership pattern or two-step process in
 
 # Modifier is not necessary to be implemented if their usage is only once in the contract
 
-the `whenOpen()` modifier is being used once in the BlurExchange.sol contract, so it's best to flatten
+the `whenOpen()` modifier is being used once in the BlurExchange.sol contract, so it's best to write inline
 ```
 File: BlurExchange.sol
 35:     modifier whenOpen() {
