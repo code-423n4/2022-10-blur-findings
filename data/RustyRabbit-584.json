@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "RustyRabbit",
+  "risk": "3",
+  "title": "No 0 address check on the fee recipients",
+  "issueId": 584,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/584"
+}
