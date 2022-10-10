@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0xNazgul",
+  "risk": "2",
+  "title": "[NAZ-M4] `_computeProof()` Can Match Any Intermediate Node or Root Because Leaf Is Not Hashed",
+  "issueId": 648,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/648"
+}
