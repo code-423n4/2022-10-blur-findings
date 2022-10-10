@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "cloudjunky",
+  "risk": "2",
+  "title": "Funds transfer can fail but tokens are still sent (WETH or ETH)",
+  "issueId": 530,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/530"
+}
