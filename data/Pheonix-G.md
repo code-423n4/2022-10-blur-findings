@@ -70,6 +70,7 @@ In the first case, the compiler has to create a temporary variable (when used) f
 
 Replace i++ with ++i
 
+
 ## **Use Custom Errors instead of Revert Strings to save Gas**
 
 1. Custom errors from Solidity 0.8.4 are cheaper than revert strings (cheaper deployment cost and runtime cost when the revert condition is met) Custom errors save ~50 gas each time they’re hit by avoiding having to allocate and store the revert string. Not defining the strings also save deployment gas
