@@ -163,7 +163,11 @@ Functions not internally called may have its visibility changed to external to s
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L102
 
 ## Payable Access Control Functions Costs Less Gas
-Consider marking functions with access control as `payable`. This will save 20 gas on each call by their respective permissible callers for not needing to have the compiler check for `msg.value`. Here are some of the instances entailed:
+Consider marking functions with access control as `payable`. This will save gas for permissible callers by not needing to have the compiler check for `msg.value`. 
+
+The extra opcodes avoided are `CALLVALUE`(2), `DUP1`(3), `ISZERO`(3), `PUSH2`(3), `JUMPI`(10), `PUSH1`(3), `DUP1`(3), `REVERT`(0), `JUMPDEST`(1), `POP`(2), which costs an average of about 21 gas per call to the function, in addition to the extra deployment cost.
+
+Here are some of the instances entailed:
 
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/ExecutionDelegate.sol#L36
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/PolicyManager.sol#L36
