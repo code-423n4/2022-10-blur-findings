@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "minhquanym",
+  "risk": "3",
+  "title": "Wrong amount of ERC1155 token result in loss of funds for buyer",
+  "issueId": 721,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/721"
+}
