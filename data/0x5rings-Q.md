@@ -60,3 +60,11 @@ Source: [https://forum.openzeppelin.com/t/what-does-disableinitializers-function
 ### Mitigation:
 
 - Consider using `[_disableInitializers()`](https://docs.openzeppelin.com/contracts/4.x/api/proxy#Initializable-_disableInitializers--)
+
+``` solidity
+
+constructor() {
+   _disableInitializers();
+}
+
+```
