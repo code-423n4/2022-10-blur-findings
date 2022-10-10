@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "yixxas",
+  "risk": "2",
+  "title": "Use safeTransferFrom instead of transferFrom as recommended by Openzeppelin whenever possible.",
+  "issueId": 512,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/512"
+}
