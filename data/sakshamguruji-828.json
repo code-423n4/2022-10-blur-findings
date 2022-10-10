@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "sakshamguruji",
+  "risk": "2",
+  "title": "TOKEN TRANSFERS DO NOT VERIFY THAT THE TOKENS WERE SUCCESSFULLY TRANSFERRED",
+  "issueId": 828,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/828"
+}
