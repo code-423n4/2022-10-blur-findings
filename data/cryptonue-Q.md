@@ -49,3 +49,15 @@ Current BlurExchange use
 BlurExchange use OpenZeppelin Ownable contract. Ownable contract is a standard way of owning a contract. But there is a potential issue within the Ownable contract, it allows for the transfer of ownership without validating that the address is a valid address in control of some expected recipient. If this function is used incorrectly, mistype, or any unexpected input, the admin user might be lost and potentially locked up for future usage.
 
 Consider implementing a transfer-accept ownership pattern or two-step process in those contracts when transfering ownership. This allow an owner to accept the transfer insuring that the account is controlled by a valid user.
+
+
+# Modifier is not necessary to be implemented if their usage is only once in the contract
+
+the `whenOpen()` modifier is being used once in the BlurExchange.sol contract, so it's best to flatten
+```
+File: BlurExchange.sol
+35:     modifier whenOpen() {
+36:         require(isOpen == 1, "Closed");
+37:         _;
+38:     }
+```
