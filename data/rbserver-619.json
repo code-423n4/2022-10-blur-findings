@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "rbserver",
+  "risk": "2",
+  "title": "Buyer or seller can be incentivized to front-run other buyer's or seller's `execute` transaction by sending own `execute` transaction",
+  "issueId": 619,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/619"
+}
