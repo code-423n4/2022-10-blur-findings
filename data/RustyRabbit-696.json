@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "RustyRabbit",
+  "risk": "2",
+  "title": "Use of transfer to send ETH is highly discouraged",
+  "issueId": 696,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/696"
+}
