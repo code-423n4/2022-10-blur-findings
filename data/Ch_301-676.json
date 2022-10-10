@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Ch_301",
+  "risk": "3",
+  "title": "The `buyer` will lose their funds by \"gas limit DoS via unbounded operations\"",
+  "issueId": 676,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/676"
+}
