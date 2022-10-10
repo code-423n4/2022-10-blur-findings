@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "rbserver",
+  "risk": "2",
+  "title": "When a valid sell order's `fees` array is large, calling execute function for such order can revert because it requires gas that exceeds block gas limit",
+  "issueId": 608,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/608"
+}
