@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "polymorphism",
+  "risk": "3",
+  "title": "Wrong payment charging when ETH is chosen as paymentToken",
+  "issueId": 665,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/665"
+}
