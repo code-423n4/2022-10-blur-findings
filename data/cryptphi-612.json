@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "cryptphi",
+  "risk": "3",
+  "title": "No fees rate limit bounds can allow fee recipient receive all price paid",
+  "issueId": 612,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/612"
+}
