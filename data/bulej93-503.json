@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "bulej93",
+  "risk": "2",
+  "title": "use call() instead of transfer",
+  "issueId": 503,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/503"
+}
