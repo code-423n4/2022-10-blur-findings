@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "JC",
+  "risk": "2",
+  "title": "Unchecked ERC20 transfers can cause lock up",
+  "issueId": 846,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/846"
+}
