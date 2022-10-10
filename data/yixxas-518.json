@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "yixxas",
+  "risk": "2",
+  "title": "Use of depreciated `payable(address).transfer(amount)` is unsafe as future gas cost change in OPCODE can break the function.",
+  "issueId": 518,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/518"
+}
