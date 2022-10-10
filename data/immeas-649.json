@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "immeas",
+  "risk": "2",
+  "title": "`eth` can get stuck in exchange contract if trader makes a mistake",
+  "issueId": 649,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/649"
+}
