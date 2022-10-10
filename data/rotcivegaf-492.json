@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "rotcivegaf",
+  "risk": "2",
+  "title": "Wrong return amount on **StandardPolicyERC1155.sol**",
+  "issueId": 492,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/492"
+}
