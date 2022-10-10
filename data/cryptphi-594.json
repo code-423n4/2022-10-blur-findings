@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "cryptphi",
+  "risk": "2",
+  "title": "Missing Root struct would result in reverts during Signature Verification",
+  "issueId": 594,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/594"
+}
