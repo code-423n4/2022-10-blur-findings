@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "brgltd",
+  "risk": "2",
+  "title": "Locked code paths involving `msg.value` can cause loss of funds",
+  "issueId": 821,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/821"
+}
