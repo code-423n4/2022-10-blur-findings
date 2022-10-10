@@ -14,6 +14,7 @@ unchecked { ++i; }
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L199
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L476
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L77
+
 #2 USING  CALL() INSTEAD OF TRANSFER() ON AN ADDRESS PAYABLE CAN SAVE GAS 
 The claimer smart contract does implement a payable fallback which uses more than 2300 gas unit.
 The claimer smart contract implements a payable fallback function that needs less than 2300 gas units but is called through proxy, raising the call’s gas usage above 2300.
@@ -32,4 +33,7 @@ https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L1
  # 5 Use != 0 instead of > 0 at the above mentioned codes. The variable is uint, so it will not be below 0 so it can just check != 0.
 != 0 costs less gas compared to > 0 for unsigned integers in require statements with the optimizer enabled
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L557
+# 6  REQUIRE()/REVERT() STRINGS LONGER THAN 32 BYTES COST EXTRA GAS
+Each extra memory word of bytes past the original 32 incurs an MSTORE which costs 3 gas
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L318
 
