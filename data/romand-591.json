@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "romand",
+  "risk": "2",
+  "title": "Order.amount parameter is ignored which leads to buyer getting less than he paid for",
+  "issueId": 591,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/591"
+}
