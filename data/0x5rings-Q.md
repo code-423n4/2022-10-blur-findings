@@ -40,6 +40,9 @@ Where a storage variable is assigned only once. These variables should be declar
 
 - File: [https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/PolicyManager.sol#L25](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/PolicyManager.sol#L25)
 
+- https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L113
+   (for _weth, _oracle params in initializer() ) 
+
 ### Mitigation:
 
 Consider adding zero-address checks in the discussed constructors: require(newAddr != address(0));.
