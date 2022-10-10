@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "arcoun",
+  "risk": "3",
+  "title": "Owner of ExecutionDelegate can steal user's assets",
+  "issueId": 564,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/564"
+}
