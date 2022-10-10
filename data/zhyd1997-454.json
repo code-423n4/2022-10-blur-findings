@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "zhyd1997",
+  "risk": "2",
+  "title": "`tranfer` may lock funds if gas execution failed.",
+  "issueId": 454,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/454"
+}
