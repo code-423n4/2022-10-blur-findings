@@ -355,3 +355,21 @@ File: BlurExchange.sol
 58:     string public constant version = "1.0";
 59:     uint256 public constant INVERSE_BASIS_POINT = 10000;
 ```
+
+
+# UNCHECKED ARITHMETIC
+
+The default “checked” behavior costs more gas when adding/diving/multiplying, because under-the-hood those checks are implemented as a series of opcodes that, prior to performing the actual arithmetic, check for under/overflow and revert if it is detected.
+
+If it can statically be determined there is no possible way for your arithmetic to under/overflow (such as a condition in an if statement), surrounding the arithmetic in an unchecked block will save gas.
+
+Sample code inside the project
+```
+File: BlurExchange.sol
+199:         for (uint8 i = 0; i < orders.length; i++) {
+200:             cancelOrder(orders[i]);
+201:         }
+```
+`i` is cannot overflow as it is a `for` loop
+
+for this type of operation we can place the arithmetic operations in an unchecked block.
