@@ -11,6 +11,17 @@ While in the current contract the function `execute` computes the new hash befor
 
 It could result in `_validateOrderParameters` to return true if the `orderHash` is not computed just before every single time because `cancelledOrFilled[hash]` was never updated to `true` like in [cancelOrder function](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L189).
 
+## [L-02] Return values of transferFrom() not checked
+Currently, the implementation allows only weth usage with transferFrom but in later implementation this might change I guess.
+Depending on the ERC20, the call could fail and no revert. Consequently, the operation would go through without actually making the transfer.
+The function returns a boolean to indicate if the transfer went through.
+
+[ExecutionDelegate.sol#125](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/ExecutionDelegate.sol#L125)
+
+
+Recommended mitigation step:
+Use safeTransferFrom instead.
+
 # **Report QA**
 
 ## [QA-1] Unused internal variable
