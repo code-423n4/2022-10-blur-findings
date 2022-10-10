@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "corerouter",
+  "risk": "2",
+  "title": "There is no checking when setting blockRange.",
+  "issueId": 583,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/583"
+}
