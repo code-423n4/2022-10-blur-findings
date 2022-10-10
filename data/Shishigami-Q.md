@@ -9,7 +9,7 @@ When cancelling all current orders for a user using function `incrementNonce`, s
 
 While in the current contract the function `execute` computes the new hash before passing it to the function `_validateOrderParameters`, in later upgrades developpers should be aware of it.
 
-It could result in `_validateOrderParameters` to return true if the `orderHash` is not computed just before every single time.
+It could result in `_validateOrderParameters` to return true if the `orderHash` is not computed just before every single time because `cancelledOrFilled[hash]` was never updated to `true` like in [cancelOrder function](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L189).
 
 # **Report QA**
 
