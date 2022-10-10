@@ -13,6 +13,11 @@ Example at the beginning of the function:
 if (fee.length == 0) return price
 ```
 
+**Links:**
+
+[contracts/BlurExchange.sol#L469](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L469)
+
+
 2 - Calculate the hash value and hardcode in the code could save gas
 ==
 
@@ -28,6 +33,10 @@ contracts/lib/EIP712.sol#L29          bytes32 constant public ROOT_TYPEHASH = ke
 contracts/lib/EIP712.sol#L33          bytes32 constant EIP712DOMAIN_TYPEHASH = keccak256(
 ```
 
+**LInks:**
+
+[contracts/lib/EIP712.sol#L20-L35](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/lib/EIP712.sol#L20-L35)
+
 3 - Use immutable variables can save gas
 ==
 
@@ -38,6 +47,10 @@ Instances of this issue:
 ```
 contracts/BlurExchange.sol#L63           address public weth;
 ```
+
+**LInks:**
+
+[contracts/BlurExchange.sol#L63](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L63)
 
 4 - Internal functions only called once can be inlined to save gas
 ==
@@ -50,6 +63,11 @@ Instances of this issue:
 contracts/BlurExchange.sol#L416          function _canMatchOrders(Order calldata sell, Order calldata buy)
 contracts/BlurExchange.sol#L548          function _exists(address what)
 ```
+
+**Links:**
+
+[contracts/BlurExchange.sol#L416](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L416)
+[contracts/BlurExchange.sol#L548](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L548)
 
 5 - Unnecessary checked arithmetic in for loop
 ==
@@ -76,6 +94,13 @@ for (uint256 i; i < 10;) {
 }
 ```
 
+**Links:**
+
+[contracts/PolicyManager.sol#L77](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/PolicyManager.sol#L77)
+[contracts/BlurExchange.sol#L199](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L199)
+[contracts/lib/MerkleVerifier.sol#L38](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/lib/MerkleVerifier.sol#L38)
+[contracts/BlurExchange.sol#L476](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L476)
+
 6 - Cache Array Length Outside of Loop
 ==
 
@@ -89,6 +114,12 @@ contracts/BlurExchange.sol#L476          for (uint8 i = 0; i < fees.length; i++)
 
 ```
 
+**Links:**
+
+[contracts/BlurExchange.sol#L199](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L199)
+[contracts/lib/MerkleVerifier.sol#L38](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/lib/MerkleVerifier.sol#L38)
+[contracts/BlurExchange.sol#L476](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L476)
+
 7 - Using private rather than public for constants save gas
 ==
 
@@ -100,3 +131,7 @@ contracts/BlurExchange.sol#L57     string public constant name = "Blur Exchange"
 contracts/BlurExchange.sol#L58     string public constant version = "1.0";
 contracts/BlurExchange.sol#L59     uint256 public constant INVERSE_BASIS_POINT = 10000;
 ```
+
+**Links:**
+
+[contracts/BlurExchange.sol#L57-L59](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L57-L59)
