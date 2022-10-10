@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0xmuxyz",
+  "risk": "2",
+  "title": "Anyone can call incrementNonce() method in the BlurExchange.sol - Access control modifier is needed",
+  "issueId": 572,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/572"
+}
