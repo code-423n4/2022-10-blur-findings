@@ -41,3 +41,29 @@ contracts/BlurExchange.sol::128-133 =>         function execute(Input calldata s
         whenOpen
     {
 ```
+
+## Zero receiveAmount on `_transferFees`
+`_transferFees` allow 0 receiveAmount. The require statement only checks for totalFee <= price, in this case the totalFee can be equal to price, making [BlurExchangeL-485](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L485) receiveAmount = 0. 
+*There is 1 instance of this issue*
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L469-L487
+```solidity
+    function _transferFees(
+        Fee[] calldata fees,
+        address paymentToken,
+        address from,
+        uint256 price
+    ) internal returns (uint256) {
+        uint256 totalFee = 0;
+        for (uint8 i = 0; i < fees.length; i++) {
+            uint256 fee = (price * fees[i].rate) / INVERSE_BASIS_POINT;
+            _transferTo(paymentToken, from, fees[i].recipient, fee);
+            totalFee += fee;
+        }
+
+        require(totalFee <= price, "Total amount of fees are more than the price");
+
+        /* Amount that will be received by seller. */
+        uint256 receiveAmount = price - totalFee;
+        return (receiveAmount);
+    }
+```
