@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Waze",
+  "risk": "3",
+  "title": "Use safetransferFrom instead of transferFrom in erc20 token.",
+  "issueId": 467,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/467"
+}
