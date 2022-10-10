@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "rbserver",
+  "risk": "2",
+  "title": "Buyer or seller can be incentivized to front-run seller's or buyer's `cancelOrder` transaction by sending own `execute` transaction",
+  "issueId": 622,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/622"
+}
