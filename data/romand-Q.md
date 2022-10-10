@@ -1,0 +1,2 @@
+transferFrom is used to transfer WETH https://github.com/code-423n4/2022-10-blur/blob/main/contracts/ExecutionDelegate.sol#L125
+Currently WETH reverts on failed transfer, but maybe in the future another WETH type token will be used (weth address is not hardcoded and passed in the constructor https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L97) which doesn't revert on fail, and returns an error value instead. ExecutionDelegate doesn't check for return values, so this will cause major issues. safeTransferFrom is more recommended in such case.
