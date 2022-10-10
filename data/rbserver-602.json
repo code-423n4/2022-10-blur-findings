@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "rbserver",
+  "risk": "2",
+  "title": "Calling execute function for valid orders for trading a nonstandard ERC721 token, which does not implement a safeTransferFrom function, reverts",
+  "issueId": 602,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/602"
+}
