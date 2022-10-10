@@ -12,6 +12,8 @@ https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c
 
 2. Stack too deep when compiling inline assembly: Variable value0 is 2 slot(s) too deep inside the stack.
 
+I recommend split the contract file into small contracts to avoid this issue.
+
 3. redundant `pragma abicoder v2`
 
 > it is enabled by default starting with Solidity 0.8.0.
