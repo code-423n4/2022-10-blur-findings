@@ -1,3 +1,11 @@
+## The Code in BlurExchange#CancelOrder overwrites the reserved "hash" keyword
+
+https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L185
+
+```
+  bytes32 hash = _hashOrder(order, nonces[order.trader]);
+```
+
 ## require statement does not have reason of failure
 
 User will not know which steps goes wrong when transaction reverted.
