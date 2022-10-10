@@ -13,3 +13,22 @@ return IERC20(token).transferFrom(from, to, amount);
 ```
 
 [https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/ExecutionDelegate.sol#L125](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/ExecutionDelegate.sol#L125)
+
+
+## **[L-02] BEST PRACTICE IS TO PREVENT SIGNATURE MALLEABILITY**
+
+Use OpenZeppelin’s `ECDSA`contract rather than calling `ecrecover()`directly
+
+```solidity
+function _recover(
+        bytes32 digest,
+        uint8 v,
+        bytes32 r,
+        bytes32 s
+    ) internal pure returns (address) {
+        require(v == 27 || v == 28, "Invalid v parameter");
+        return ecrecover(digest, v, r, s);
+    }
+```
+
+[https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L401-L409](https://github.com/code-423n4/2022-10-blur/blob/2fdaa6e13b544c8c11d1c022a575f16c3a72e3bf/contracts/BlurExchange.sol#L401-L409)
