@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Olivierdem",
+  "risk": "2",
+  "title": "Do not use argument input of `uint256 chainId`.",
+  "issueId": 600,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/600"
+}
