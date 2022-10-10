@@ -16,4 +16,10 @@ https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L77
 # 2  <X> += <Y> COSTS MORE GAS THAN <X> = <X> + <Y> FOR STATE VARIABLES
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L208
+# 3  ABI.ENCODE() IS LESS EFFICIENT THAN ABI.ENCODEPACKED()
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L45
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L61
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L91
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L132
+
 
