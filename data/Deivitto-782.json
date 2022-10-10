@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Deivitto",
+  "risk": "3",
+  "title": "# Arbitrary send of non protected function may lead into loss of funds",
+  "issueId": 782,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/782"
+}
