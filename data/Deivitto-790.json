@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Deivitto",
+  "risk": "2",
+  "title": "ERC20 `transfer` with not checked return value",
+  "issueId": 790,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/790"
+}
