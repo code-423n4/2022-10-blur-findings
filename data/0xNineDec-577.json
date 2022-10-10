@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0xNineDec",
+  "risk": "3",
+  "title": "Non ERC20 compliant tokens are not supported",
+  "issueId": 577,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/577"
+}
