@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0xNineDec",
+  "risk": "2",
+  "title": "Order signatures made by EIP1271 compliant multisigs are not supported",
+  "issueId": 576,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/576"
+}
