@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0x52",
+  "risk": "2",
+  "title": "BlurExchage#setBlockRange can cause previously expired order to be unexpectedly valid again",
+  "issueId": 801,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/801"
+}
