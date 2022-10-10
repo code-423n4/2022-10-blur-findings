@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "dipp",
+  "risk": "2",
+  "title": "User may lose funds if msg.value > 0 but paymentToken != address(0)",
+  "issueId": 671,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/671"
+}
