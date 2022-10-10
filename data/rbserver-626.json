@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "rbserver",
+  "risk": "3",
+  "title": "Asset that seller or buyer does not intend to sell or buy can be unexpectedly sold or bought",
+  "issueId": 626,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/626"
+}
