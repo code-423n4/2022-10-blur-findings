@@ -8,7 +8,7 @@
     3. Always state the units of fee (i.e. feePercentage, feePartsPerThounsand).
 
     4. Unused import
-        - To imporve readability and avoir confusion, consider removing the following unused import:
+        - To improve readability and avoir confusion, consider removing the following unused import:
             - In the BlurExchange contract, the IBlurExchange interface.
             - In the ExecutionDelegate contract, the IExecutionDelegate interface.
             - In the PolicyManager contract, the IPolicyManager interface.
