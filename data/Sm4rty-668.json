@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Sm4rty",
+  "risk": "2",
+  "title": "Use SafeTransfer for instead of transfer for ERC20 Tokens",
+  "issueId": 668,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/668"
+}
