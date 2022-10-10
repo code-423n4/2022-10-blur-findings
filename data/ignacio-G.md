@@ -16,10 +16,13 @@ https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L77
 # 2  <X> += <Y> COSTS MORE GAS THAN <X> = <X> + <Y> FOR STATE VARIABLES
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L208
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L479
 # 3  ABI.ENCODE() IS LESS EFFICIENT THAN ABI.ENCODEPACKED()
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L45
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L61
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L91
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L132
-
+ # 4 Use != 0 instead of > 0 at the above mentioned codes. The variable is uint, so it will not be below 0 so it can just check != 0.
+!= 0 costs less gas compared to > 0 for unsigned integers in require statements with the optimizer enabled
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L557
 
