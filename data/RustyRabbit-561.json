@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "RustyRabbit",
+  "risk": "3",
+  "title": "ChainId in EIP712 domain separator is fixed during initialization.",
+  "issueId": 561,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/561"
+}
