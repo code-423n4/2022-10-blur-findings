@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "DimitarDimitrov",
+  "risk": "2",
+  "title": "Transfer reminder of msg.value is bad practice",
+  "issueId": 753,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/753"
+}
