@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "rbserver",
+  "risk": "2",
+  "title": "Calling execute function for valid orders that use ETH as `paymentToken` can revert when seller or sell order's fee recipient is a contract that has gas-intensive logics in its receive function",
+  "issueId": 604,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/604"
+}
