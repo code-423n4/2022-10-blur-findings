@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "RustyRabbit",
+  "risk": "3",
+  "title": "ETH sent with `execute()` transaction will be stuck in BlurExchange.sol when WETH paymentToken is specified.",
+  "issueId": 595,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/595"
+}
