@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "sakshamguruji",
+  "risk": "2",
+  "title": "Using weth As An address Type Might Make The Contract Unusable ",
+  "issueId": 568,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/568"
+}
