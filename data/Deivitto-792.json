@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Deivitto",
+  "risk": "2",
+  "title": "Use of `transfer()` instead of `call()` to send eth",
+  "issueId": 792,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/792"
+}
