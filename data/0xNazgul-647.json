@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0xNazgul",
+  "risk": "2",
+  "title": "[NAZ-M3] Calls Inside Unbounded Loops That May Address DoS",
+  "issueId": 647,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/647"
+}
