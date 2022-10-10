@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "ayeslick",
+  "risk": "2",
+  "title": "`blockRange` can equal zero which may break oracle authorization",
+  "issueId": 743,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/743"
+}
