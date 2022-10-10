@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "RustyRabbit",
+  "risk": "3",
+  "title": "`listingTime` can be spoofed in the order which detrmines who the taker is, which in turn determines which matching policy is used.",
+  "issueId": 589,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/589"
+}
