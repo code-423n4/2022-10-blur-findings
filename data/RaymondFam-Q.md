@@ -140,3 +140,9 @@ https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/ReentrancyGua
 `_canSettleOrder()` in `BlurExchange.sol` uses `block.timestamp` as part of its time checks. Nevertheless, timestamps can be slightly altered by miners/validators to favor them in contracts that have logics that depend strongly on them.
 
 Consider taking into account this issue and warning the users that such a scenario could happen. If the alteration of timestamps cannot affect the protocol in any way, consider documenting the reasoning and writing tests enforcing that these guarantees will be preserved even if the code changes in the future.
+
+## Missing Require Error Message
+Consider adding a less than 32 character string message to all require statements just so that a relevant message would be displayed just in case of a revert. Here are some of the instances entailed:
+
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L183
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L452
