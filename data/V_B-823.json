@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "V_B",
+  "risk": "2",
+  "title": "Merkle verifier library verifies intermediate inputs",
+  "issueId": 823,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/823"
+}
