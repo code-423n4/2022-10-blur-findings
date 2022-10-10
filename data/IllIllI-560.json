@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "IllIllI",
+  "risk": "2",
+  "title": "Vulnerable to cross-chain replay attacks due to static `DOMAIN_SEPARATOR`/`domainSeparator`",
+  "issueId": 560,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/560"
+}
