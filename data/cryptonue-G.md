@@ -334,3 +334,12 @@ File: MerkleVerifier.sol
 File: ReentrancyGuarded.sol
 10:     bool reentrancyLock = false;
 ```
+
+# STATE VARIABLES ONLY SET IN THE CONSTRUCTOR SHOULD BE DECLARED IMMUTABLE
+
+Avoids a Gsset (20000 gas) in the constructor, and replaces the first access in each transaction (Gcoldsload - 2100 gas) and each access thereafter (Gwarmacces - 100 gas) with a PUSH32 (3 gas).
+
+```
+File: BlurExchange.sol
+113:         weth = _weth;
+```
