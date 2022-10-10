@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "joestakey",
+  "risk": "3",
+  "title": "Orders of ERC1155 tokens with different amounts can be matched",
+  "issueId": 711,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/711"
+}
