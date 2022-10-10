@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "berndartmueller",
+  "risk": "2",
+  "title": "Fee recipient can reject matched orders by rejecting ETH transfer",
+  "issueId": 783,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/783"
+}
