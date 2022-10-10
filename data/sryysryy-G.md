@@ -296,8 +296,8 @@ contracts/BlurExchange.sol::242-245 =>                function setBlockRange
 contracts/ExecutionDelegate.sol::36 =>        function approveContract(address _contract) onlyOwner external {
 contracts/ExecutionDelegate.sol::45 =>        function denyContract(address _contract) onlyOwner external {
 
-contracts/PolicyManagere.sol::25 =>        function addPolicy(address policy) external override onlyOwner {
-contracts/PolicyManagere.sol::36 =>    function removePolicy(address policy) external override onlyOwner {
+contracts/PolicyManager.sol::25 =>        function addPolicy(address policy) external override onlyOwner {
+contracts/PolicyManager.sol::36 =>    function removePolicy(address policy) external override onlyOwner {
 ```
 
 
@@ -343,6 +343,6 @@ contracts/ExecutionDelegate.sol::92 =>  require(revokedApproval[from] == false,
 contracts/ExecutionDelegate.sol::108 =>  require(revokedApproval[from] == false, "User has revoked approval");
 contracts/ExecutionDelegate.sol::124 =>  require(revokedApproval[from] == false, "User has revoked approval");
 
-contracts/PolicyManagere.sol::26 =>        require(!_whitelistedPolicies.contains(policy), "Already whitelisted");onlyOwner {
-contracts/PolicyManagere.sol::37 =>    require(_whitelistedPolicies.contains(policy), "Not whitelisted");
+contracts/PolicyManager.sol::26 =>        require(!_whitelistedPolicies.contains(policy), "Already whitelisted");onlyOwner {
+contracts/PolicyManager.sol::37 =>    require(_whitelistedPolicies.contains(policy), "Not whitelisted");
 ```
