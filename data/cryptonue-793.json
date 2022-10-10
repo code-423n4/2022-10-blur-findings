@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "cryptonue",
+  "risk": "2",
+  "title": "AN ATTACKER CAN CREATE A SHORT PUT OPTION ORDER ON AN NFT THAT DOES NOT SUPPORT ERC721 (LIKE CRYPTOPUNK), AND THE USER CAN FULFILL THE ORDER, BUT CANNOT EXERCISE THE OPTION",
+  "issueId": 793,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/793"
+}
