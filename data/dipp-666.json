@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "dipp",
+  "risk": "3",
+  "title": "StandardPolicyERC1155.sol returns amount == 1 instead of amount == order.amount",
+  "issueId": 666,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/666"
+}
