@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "d3e4",
+  "risk": "2",
+  "title": "Direct usage of `execute()` may leave unintended replayable orders",
+  "issueId": 809,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/809"
+}
