@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Aymen0909",
+  "risk": "2",
+  "title": "Approvals revoked by users are lost when a new executionDelegate is set",
+  "issueId": 713,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/713"
+}
