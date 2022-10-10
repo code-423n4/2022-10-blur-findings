@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "TomJ",
+  "risk": "2",
+  "title": "User will Lose ETH when Sending `msg.value` when `order.paymentToken` is set to WETH",
+  "issueId": 528,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/528"
+}
