@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "RustyRabbit",
+  "risk": "3",
+  "title": "Admin function without delay allows owner to easily steal the any of the user's approved NFTs and WETH",
+  "issueId": 629,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/629"
+}
