@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "rotcivegaf",
+  "risk": "2",
+  "title": "The owner can steal assets(ERC721, ERC1155 and ERC20) of users",
+  "issueId": 487,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/487"
+}
