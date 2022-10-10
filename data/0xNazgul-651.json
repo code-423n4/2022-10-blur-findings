@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0xNazgul",
+  "risk": "2",
+  "title": "[NAZ-M6] Use `safeTransferFrom()` Instead of `transferFrom()` For Outgoing ERC721 Transfers",
+  "issueId": 651,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/651"
+}
