@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "saian",
+  "risk": "2",
+  "title": "`execute` fails if any fee recipient reverts ether transfer",
+  "issueId": 501,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/501"
+}
