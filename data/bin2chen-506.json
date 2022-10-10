@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "bin2chen",
+  "risk": "2",
+  "title": "execute() does not check the useless msg.value, which may cause the loss of funds",
+  "issueId": 506,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/506"
+}
