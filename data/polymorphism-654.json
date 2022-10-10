@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "polymorphism",
+  "risk": "3",
+  "title": "The amount of an ERC1155 token should be checked.",
+  "issueId": 654,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/654"
+}
