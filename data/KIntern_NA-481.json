@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "KIntern_NA",
+  "risk": "3",
+  "title": "In `StandardPolicyERC1155`, 2 functions `canMatchMakerAsk` and `canMatchMakerBid` always return amount = 1 with any value of amounts in buy order and sell order",
+  "issueId": 481,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/481"
+}
