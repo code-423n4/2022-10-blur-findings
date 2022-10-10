@@ -105,3 +105,24 @@ I suggest wrapping with an `unchecked` block here:
 # 8. [G-8] Variables: Cache read variables in memory will save gas
 
 File contracts/PolicyManager.sol, function viewWhitelistedPolicies, I suggest create a memory variable of the storage variable `_whitelistedPolicies`, and use it instead.
+
+# 9. [G-9] Storage: Emitting storage values
+
+The values emitted shouldn't be read from storage. The existing memory values should be used instead in here:
+
+    File contracts/BlurExchange.sol, line 220-221:     
+           executionDelegate = _executionDelegate;
+           emit NewExecutionDelegate(executionDelegate); // I suggest:  emit NewExecutionDelegate(_executionDelegate);
+
+    File contracts/BlurExchange.sol, line 229-230:     
+           policyManager = _policyManager;
+           emit NewPolicyManager(policyManager); // I suggest:  emit NewPolicyManager(_policyManager);
+
+    File contracts/BlurExchange.sol, line 238-239:     
+           oracle = _oracle;
+           emit NewOracle(oracle); // I suggest:  emit NewOracle(_oracle);
+
+    File contracts/BlurExchange.sol, line 246-247:     
+           blockRange = _blockRange;
+           emit NewBlockRange(blockRange); // I suggest:  emit NewBlockRange(_blockRange);
+
