@@ -20,6 +20,8 @@ In any trading matchings, only the seller's fee is accounted for. This is an iss
     - Even if the buyer knows they have zero fees incurred, then the fact that they have to sign a possibly non-empty fee structure is itself a Low/QA issue.
 - Nowhere in the code is this behavior documented. The only way to find out is to read this specific part of the code, or other related parts of the codebase to reach this specific part as well.
 
+**Remarks**: It is hard to assess the risk of this finding, as the intention was not documented anywhere in the repository, which makes it anywhere from a QA/low issue (documentation, fee sanity checks) to a high risk issue (mishandling of fees).
+
 **Recommended mitigation method**: Properly document the fee mechanism for the maker/taker (or the buyer/seller), as well as consider adding sanity checks for the fee structures of each order.
 
 # Non-risk/QA findings
