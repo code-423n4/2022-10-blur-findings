@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "hansfriese",
+  "risk": "2",
+  "title": "A cancelled order can be executed again by the order creator.",
+  "issueId": 717,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/717"
+}
