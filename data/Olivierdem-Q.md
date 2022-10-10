@@ -5,9 +5,9 @@
        `uint256 chainId,
         address _weth,` )
 
-    4. Always state the units of fee (i.e. feePercentage, feePartsPerThounsand).
+    3. Always state the units of fee (i.e. feePercentage, feePartsPerThounsand).
 
-    5. Unused import
+    4. Unused import
         - To imporve readability and avoir confusion, consider removing the following unused import:
             - In the BlurExchange contract, the IBlurExchange interface.
             - In the ExecutionDelegate contract, the IExecutionDelegate interface.
