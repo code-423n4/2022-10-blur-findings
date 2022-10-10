@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Waze",
+  "risk": "2",
+  "title": "Missing payable when use msg.value as price",
+  "issueId": 466,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/466"
+}
