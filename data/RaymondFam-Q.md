@@ -95,7 +95,7 @@ https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#
 ```
         require(totalFee < price, "Total amount of fees are more than the price");
 ```
-That way, the following code lines in `_transferTo()` may be removed since `amount == 0` has already been taken of in the above code line inclusive of its proper error handling:
+That way, it would skip calling `_transferTo()` when `totalFee` = `price` which is equivalent to `amount == 0`:
 
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L502-L504
 
@@ -128,9 +128,6 @@ Consider bounding the loop where possible to avoid unnecessary gas wastage and d
     }
 ```
 Note: `whatCodeHash` will need to be added to the struct `Order`.
-
-## Discrepancy Between Code and Comments
-There is a mismatch between what the code implements and what the corresponding comment describes that code implements. For instance, in `BlurExchange.sol`, an array of fees is deducted from seller's price, but the fees aren't paid to anyone. The fees and variable name should be termed as discount/rebate instead. Consider updating the code and/or the comment to be consistent.
 
 ## Not Completely Using OpenZeppelin Contracts
 OpenZeppelin maintains a library of standard, audited, community-reviewed, and battle-tested smart contracts. Instead of always importing these contracts, Blur Exchange project reimplements them in some cases. This increases the amount of code that the Blur Exchange team will have to maintain and miss all the improvements and bug fixes that the OpenZeppelin team is constantly implementing with the help of the community. 
