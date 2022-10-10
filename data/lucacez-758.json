@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "lucacez",
+  "risk": "2",
+  "title": "USE OF SOLIDITY VERSION 0.8.13 WHICH HAS TWO KNOWN ISSUES APPLICABLE ",
+  "issueId": 758,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/758"
+}
