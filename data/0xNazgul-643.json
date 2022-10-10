@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "0xNazgul",
+  "risk": "2",
+  "title": "[NAZ-M1] No Use of Upgradeable `ReentrancyGuarded && EIP712` Contracts",
+  "issueId": 643,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/643"
+}
