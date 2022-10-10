@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "PaludoX0",
+  "risk": "3",
+  "title": "If amount of ERC1155 is > 1 only 1 token is transferred causing user fund loosing",
+  "issueId": 455,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/455"
+}
