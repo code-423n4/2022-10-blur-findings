@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "joestakey",
+  "risk": "3",
+  "title": "`execute` does not work for ERC1155 tokens orders where `amount > 1`",
+  "issueId": 706,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/706"
+}
