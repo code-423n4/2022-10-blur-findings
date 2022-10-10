@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "Jeiwan",
+  "risk": "3",
+  "title": "Only one ERC1155 token is always sold, no matter what order amount is",
+  "issueId": 476,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/476"
+}
