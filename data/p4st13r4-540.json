@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "p4st13r4",
+  "risk": "2",
+  "title": "BlurExchange.execute does not propertly enforce buy and sell side",
+  "issueId": 540,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/540"
+}
