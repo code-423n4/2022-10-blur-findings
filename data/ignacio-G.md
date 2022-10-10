@@ -36,4 +36,4 @@ https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#
 # 6  REQUIRE()/REVERT() STRINGS LONGER THAN 32 BYTES COST EXTRA GAS
 Each extra memory word of bytes past the original 32 incurs an MSTORE which costs 3 gas
 https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L318
-
+https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L534
