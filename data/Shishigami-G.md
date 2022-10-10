@@ -8,7 +8,7 @@ See more [here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/58f6
 
 
 - ReentrancyGuarded.sol
-  - [ReentrancyGuarded.sol#10](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/ReentrancyGuarded.sol#10)
+  - [ReentrancyGuarded.sol#10](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/ReentrancyGuarded.sol#L10)
 
 
 
@@ -17,10 +17,10 @@ See more [here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/58f6
 When the argument of the function and the memory value are the same, you should rather emit the argument variable (memory value).
 
 - BlurExchange.sol
-  - [BlurExchange.sol#221](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#221) i.e. replace `executionDelegate` by `_executionDelegate`
-  - [BlurExchange.sol#230](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#230) i.e. replace `policyManager` by `_policyManager`
-  - [BlurExchange.sol#239](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#239) i.e. replace `oracle` by `_oracle`
-  - [BlurExchange.sol#247](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#247) i.e. replace `blockRange` by `_blockRange`
+  - [BlurExchange.sol#221](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L221) i.e. replace `executionDelegate` by `_executionDelegate`
+  - [BlurExchange.sol#230](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L230) i.e. replace `policyManager` by `_policyManager`
+  - [BlurExchange.sol#239](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L239) i.e. replace `oracle` by `_oracle`
+  - [BlurExchange.sol#247](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L247) i.e. replace `blockRange` by `_blockRange`
 
 
 
@@ -29,32 +29,31 @@ It will skip test that will lower the deployment and usage costs.
 The extra opcodes avoided are `CALLVALUE(2)`, `DUP1(3)`, `ISZERO(3)`, `PUSH2(3)`, `JUMPI(10)`, `PUSH1(3)`, `DUP1(3)`, `REVERT(0)`, `JUMPDEST(1)`, `POP(2)`, which costs an average of about 21 gas per call to the function, in addition to the extra deployment cost
 
 1. BlurExchange.sol
-  - [BlurExchange.sol#43](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#43)
-  - [BlurExchange.sol#47](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#47)
-  - [BlurExchange.sol#53](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#53)
-  - [BlurExchange.sol#217](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#217)
-  - [BlurExchange.sol#226](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#226)
-  - [BlurExchange.sol#235](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#235)
-  - [BlurExchange.sol#244](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#244)
+  - [BlurExchange.sol#43](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L43)
+  - [BlurExchange.sol#47](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L47)
+  - [BlurExchange.sol#53](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L53)
+  - [BlurExchange.sol#217](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L217)
+  - [BlurExchange.sol#226](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L226)
+  - [BlurExchange.sol#235](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L235)
+  - [BlurExchange.sol#244](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L244)
 
 
 
 2. ExecutionDelegate.sol
-  - [ExecutionDelegate.sol#36](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/ExecutionDelegate.sol#36)
-  - [ExecutionDelegate.sol#45](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/ExecutionDelegate.sol#45)
+  - [ExecutionDelegate.sol#36](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/ExecutionDelegate.sol#L36)
+  - [ExecutionDelegate.sol#45](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/ExecutionDelegate.sol#L45)
 
 
 3. PolicyManager.sol
-  - [PolicyManager.sol#25](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/PolicyManager.sol#25)
-  - [PolicyManager.sol#36](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/PolicyManager.sol#36)
+  - [PolicyManager.sol#25](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/PolicyManager.sol#L25)
+  - [PolicyManager.sol#36](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/PolicyManager.sol#L36)
 
 
 ## [G-04] Use `!= 0` instead of `> 0` on uint variables
 uint variables will never be lower than 0. Therefore, > 0 and != 0 have same meanings. Using != 0 can reduce the gas deployment cost, so it is worth using != 0 wherever possible.
 
 1. BlurExchange.sol
-  - [BlurExchange.sol#557](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#557)
-
+  - [BlurExchange.sol#557](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L557)
 
 
 
@@ -62,41 +61,41 @@ uint variables will never be lower than 0. Therefore, > 0 and != 0 have same mea
 Saves 6 gas per loop.
 
 1. BlurExchange.sol
-  - [BlurExchange.sol#199](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#199)
-  - [BlurExchange.sol#476](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#476)
+  - [BlurExchange.sol#199](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L199)
+  - [BlurExchange.sol#476](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L476)
 
 
 2. PolicyManager.sol
-  - [PolicyManager.sol#77](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/PolicyManager.sol#77)
+  - [PolicyManager.sol#77](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/PolicyManager.sol#L77)
 
 
 3. EIP712.sol
-  - [EIP712.sol#77](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#77)
+  - [EIP712.sol#77](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L77)
 
 
 4. MerkleVerifier.sol
-  - [MerkleVerifier.sol#38](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/MerkleVerifier.sol#38)
+  - [MerkleVerifier.sol#38](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/MerkleVerifier.sol#L38)
 
 
 ## [G-06] Do not initialize non constant/non immutable vairable to zero
 Not overwriting the default value for stack variable saves 8 gas per loop.
 
 1. BlurExchange.sol
-  - [BlurExchange.sol#199](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#199)
-  - [BlurExchange.sol#476](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#476)
+  - [BlurExchange.sol#199](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L199)
+  - [BlurExchange.sol#476](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L476)
 
 
 2. PolicyManager.sol
-  - [PolicyManager.sol#77](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/PolicyManager.sol#77)
+  - [PolicyManager.sol#77](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/PolicyManager.sol#L77)
 
 
 3. EIP712.sol
-  - [EIP712.sol#77](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#77)
+  - [EIP712.sol#77](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L77)
 
 
 
 4. MerkleVerifier.sol
-  - [MerkleVerifier.sol#38](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/MerkleVerifier.sol#38)
+  - [MerkleVerifier.sol#38](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/MerkleVerifier.sol#L38)
 
 
 Recommended mitigation steps: \
@@ -107,20 +106,20 @@ Do not initialize them to 0 since it is the default value.
 In solidity 0.8.0 and above, checked arithmetic is implemented but can be deactivated by using `unchecked` keyword. This saves 30-40gas per loop. Since `i` is bounded in the loop, there is no need for checked arithmetic if `orders.length`, `fee.length` < 2<sup>8</sup>-1 and if `orders.length`, `length`, `proof.length` < 2<sup>256</sup>-1
 
 1. BlurExchange.sol
-  - [BlurExchange.sol#199](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#199)
-  - [BlurExchange.sol#476](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#476)
+  - [BlurExchange.sol#199](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L199)
+  - [BlurExchange.sol#476](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L476)
 
 
 2. PolicyManager.sol
-  - [PolicyManager.sol#77](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/PolicyManager.sol#77)
+  - [PolicyManager.sol#77](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/PolicyManager.sol#L77)
 
 
 3. EIP712.sol
-  - [EIP712.sol#77](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#77)
+  - [EIP712.sol#77](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L77)
 
 
 4. MerkleVerifier.sol
-  - [MerkleVerifier.sol#38](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/MerkleVerifier.sol#38)
+  - [MerkleVerifier.sol#38](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/MerkleVerifier.sol#L38)
 
 ## [G-8]`variable.length` should not be looked up in every loop of a for-loop
 The overheads outlined below are PER LOOP, excluding the first loop
@@ -132,24 +131,24 @@ The overheads outlined below are PER LOOP, excluding the first loop
 Caching the length changes each of these to a `DUP<N>` (3 gas), and gets rid of the extra `DUP<N>` needed to store the stack offset
 
 1. BlurExchange.sol
-  - [BlurExchange.sol#199](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#199)
-  - [BlurExchange.sol#476](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#476)
+  - [BlurExchange.sol#199](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L199)
+  - [BlurExchange.sol#476](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L476)
 
 
 2. EIP712.sol
-  - [EIP712.sol#77](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#77)
+  - [EIP712.sol#77](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/EIP712.sol#L77)
 
 
 3. MerkleVerifier.sol
-  - [MerkleVerifier.sol#38](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/MerkleVerifier.sol#38)
+  - [MerkleVerifier.sol#38](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/lib/MerkleVerifier.sol#L38)
 
 
 ## [G-09] require()/revert() strings longer than 32 bytes cost extra gas
 Each extra memory word of bytes past the original 32 incurs an `MSTORE` which cost 3 gas.
 
 1. BlurExchange.sol
-  - [BlurExchange.sol#482](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#482)
+  - [BlurExchange.sol#482](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/BlurExchange.sol#L482)
 
 
 2. ExecutionDelegate.sol
-  - [ExecutionDelegate.sol#22](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/ExecutionDelegate.sol#22)
+  - [ExecutionDelegate.sol#22](https://github.com/code-423n4/2022-10-blur/blob/main/contracts/ExecutionDelegate.sol#L22)
