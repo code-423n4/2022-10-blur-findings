@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "TomJ",
+  "risk": "2",
+  "title": "Use Call Instead of Transfer for Address Payable",
+  "issueId": 532,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/532"
+}
