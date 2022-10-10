@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "TomJ",
+  "risk": "3",
+  "title": "Seller can specify as many `Order.amount` as they want but it will send only 1 token to the Buyer ",
+  "issueId": 562,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/562"
+}
