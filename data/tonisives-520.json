@@ -1,0 +1,8 @@
+{
+  "contest": 168,
+  "handle": "tonisives",
+  "risk": "2",
+  "title": "ExecutionDelegate upgrade could remove revokedApprovals and contracts",
+  "issueId": 520,
+  "issueUrl": "https://github.com/code-423n4/2022-10-blur-findings/issues/520"
+}
