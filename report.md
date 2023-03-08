@@ -1,3 +1,11 @@
+---
+sponsor: "Blur Exchange"
+slug: "2022-10-blur"
+date: "2022-12-08"
+title: "Blur Exchange contest"
+findings: "https://github.com/code-423n4/2022-10-blur-findings/issues"
+contest: 168
+---
 
 # Overview
 
